@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="HealthMonitorModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <Function Name="sp_FetchTradingPartnerDataById_TPM" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_FetchTradingPartnerData_TPM" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="customerName" Type="varchar" Mode="In" />
+          <Parameter Name="customerNumber" Type="varchar" Mode="In" />
+          <Parameter Name="FeedID" Type="varchar" Mode="In" />
+          <Parameter Name="statusInd" Type="varchar" Mode="In" />
+          <Parameter Name="vendor" Type="varchar" Mode="In" />
+          <Parameter Name="renewalMonth" Type="varchar" Mode="In" />
+          <Parameter Name="membershipCountStart" Type="int" Mode="In" />
+          <Parameter Name="membershipCountEnd" Type="int" Mode="In" />
+          <Parameter Name="lineOFBusiness" Type="varchar" Mode="In" />
+          <Parameter Name="fileType" Type="varchar" Mode="In" />
+        </Function>
+        <EntityContainer Name="HealthMonitorModelStoreContainer" />
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="HealthMonitorModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="HealthMonitorEntities" annotation:LazyLoadingEnabled="true" >
+          <FunctionImport Name="sp_FetchTradingPartnerData_TPM" ReturnType="Collection(HealthMonitorModel.sp_FetchTradingPartnerData_TPM_Result)">
+            <Parameter Name="customerName" Mode="In" Type="String" />
+            <Parameter Name="customerNumber" Mode="In" Type="String" />
+            <Parameter Name="FeedID" Mode="In" Type="String" />
+            <Parameter Name="statusInd" Mode="In" Type="String" />
+            <Parameter Name="vendor" Mode="In" Type="String" />
+            <Parameter Name="renewalMonth" Mode="In" Type="String" />
+            <Parameter Name="membershipCountStart" Mode="In" Type="Int32" />
+            <Parameter Name="membershipCountEnd" Mode="In" Type="Int32" />
+            <Parameter Name="lineOFBusiness" Mode="In" Type="String" />
+            <Parameter Name="fileType" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_FetchTradingPartnerDataById_TPM" ReturnType="Collection(HealthMonitorModel.sp_FetchTradingPartnerDataById_TPM_Result)">
+            <Parameter Name="Id" Mode="In" Type="Int32" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="sp_FetchTradingPartnerData_TPM_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Customer" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="CustomerNumber" Nullable="false" MaxLength="12" />
+          <Property Type="DateTime" Name="CustomerEffectiveDate" Nullable="false" />
+          <Property Type="DateTime" Name="CustomerTermDate" Nullable="true" />
+          <Property Type="String" Name="FeedID" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="RenewalMonth" Nullable="true" MaxLength="30" />
+          <Property Type="Int32" Name="MembershipCount" Nullable="true" />
+          <Property Type="String" Name="LineOfBusiness" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="Notes" Nullable="true" />
+          <Property Type="String" Name="BenefitFocusGroupInd" Nullable="false" MaxLength="3" />
+          <Property Type="DateTime" Name="BenefitFocusMigrationDate" Nullable="true" />
+          <Property Type="String" Name="PGInd" Nullable="false" MaxLength="3" />
+          <Property Type="String" Name="PGTime" Nullable="true" MaxLength="Max" />
+          <Property Type="String" Name="BrokerName" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="AccountManager" Nullable="true" MaxLength="100" />
+          <Property Type="Int32" Name="FacetsMigrationDate" Nullable="true" />
+          <Property Type="String" Name="Frequency" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="FeedType" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="ExpectedReceiptDay" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ExpectedRunDay" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="FileType" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="CustomProcess" Nullable="true" />
+          <Property Type="String" Name="FileFormat" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="SpecialHandlingInstrc" Nullable="true" MaxLength="Max" />
+          <Property Type="String" Name="Vendor" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="VendorEffectiveDate" Nullable="true" />
+          <Property Type="DateTime" Name="VendorTermDate" Nullable="true" />
+          <Property Type="String" Name="MainVendorContact" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="MainVendorPhone" Nullable="true" MaxLength="120" />
+          <Property Type="String" Name="MainVendorEmail" Nullable="true" MaxLength="120" />
+          <Property Type="String" Name="SecondVendorName" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="SecondVendorPhone" Nullable="true" MaxLength="120" />
+          <Property Type="String" Name="SecondVendorEmail" Nullable="true" MaxLength="120" />
+          <Property Type="String" Name="TrasnferMethod" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="FTPLogin" Nullable="true" MaxLength="30" />
+          <Property Type="Binary" Name="FTPPassword" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="FTPFolder" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="StatusInd" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="Status" Nullable="true" MaxLength="10" />
+          <Property Type="DateTime" Name="DateVerified" Nullable="true" />
+          <Property Type="String" Name="Owner" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="OwnersComments" Nullable="true" MaxLength="Max" />
+          <Property Type="String" Name="CreatedUser" Nullable="true" MaxLength="12" />
+          <Property Type="String" Name="UpdatedUserId" Nullable="true" MaxLength="12" />
+          <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="UpdatedDate" Nullable="true" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="sp_FetchTradingPartnerDataById_TPM_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Customer" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="CustomerNumber" Nullable="false" MaxLength="12" />
+          <Property Type="DateTime" Name="CustomerEffectiveDate" Nullable="false" />
+          <Property Type="DateTime" Name="CustomerTermDate" Nullable="false" />
+          <Property Type="String" Name="FeedID" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="RenewalMonth" Nullable="true" MaxLength="30" />
+          <Property Type="Int32" Name="MembershipCount" Nullable="true" />
+          <Property Type="String" Name="LineOfBusiness" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="Notes" Nullable="true" />
+          <Property Type="String" Name="BenefitFocusGroupInd" Nullable="false" MaxLength="3" />
+          <Property Type="DateTime" Name="BenefitFocusMigrationDate" Nullable="false" />
+          <Property Type="String" Name="PGInd" Nullable="false" MaxLength="3" />
+          <Property Type="String" Name="PGTime" Nullable="true" MaxLength="Max" />
+          <Property Type="String" Name="BrokerName" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="AccountManager" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="FacetsMigrationDate" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="Frequency" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="FeedType" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="ExpectedReceiptDay" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ExpectedRunDay" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="FileType" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="CustomProcess" Nullable="true" />
+          <Property Type="String" Name="FileFormat" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="SpecialHandlingInstrc" Nullable="true" MaxLength="Max" />
+          <Property Type="String" Name="Vendor" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="VendorEffectiveDate" Nullable="false" />
+          <Property Type="DateTime" Name="VendorTermDate" Nullable="false" />
+          <Property Type="String" Name="MainVendorContact" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="MainVendorPhone" Nullable="true" MaxLength="120" />
+          <Property Type="String" Name="MainVendorEmail" Nullable="true" MaxLength="120" />
+          <Property Type="String" Name="SecondVendorName" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="SecondVendorPhone" Nullable="true" MaxLength="120" />
+          <Property Type="String" Name="SecondVendorEmail" Nullable="true" MaxLength="120" />
+          <Property Type="String" Name="TrasnferMethod" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="FTPLogin" Nullable="true" MaxLength="30" />
+          <Property Type="Binary" Name="FTPPassword" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="FTPFolder" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="StatusInd" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="Status" Nullable="true" MaxLength="10" />
+          <Property Type="DateTime" Name="DateVerified" Nullable="false" />
+          <Property Type="String" Name="Owner" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="OwnersComments" Nullable="true" MaxLength="Max" />
+          <Property Type="String" Name="CreatedUser" Nullable="true" MaxLength="12" />
+          <Property Type="String" Name="UpdatedUserId" Nullable="true" MaxLength="12" />
+          <Property Type="DateTime" Name="CreatedDate" Nullable="false" Precision="23" />
+          <Property Type="DateTime" Name="UpdatedDate" Nullable="false" Precision="23" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="HealthMonitorModelStoreContainer" CdmEntityContainer="HealthMonitorEntities" >
+          <FunctionImportMapping FunctionImportName="sp_FetchTradingPartnerData_TPM" FunctionName="HealthMonitorModel.Store.sp_FetchTradingPartnerData_TPM">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="HealthMonitorModel.sp_FetchTradingPartnerData_TPM_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Customer" ColumnName="Customer" />
+                <ScalarProperty Name="CustomerNumber" ColumnName="CustomerNumber" />
+                <ScalarProperty Name="CustomerEffectiveDate" ColumnName="CustomerEffectiveDate" />
+                <ScalarProperty Name="CustomerTermDate" ColumnName="CustomerTermDate" />
+                <ScalarProperty Name="FeedID" ColumnName="FeedID" />
+                <ScalarProperty Name="RenewalMonth" ColumnName="RenewalMonth" />
+                <ScalarProperty Name="MembershipCount" ColumnName="MembershipCount" />
+                <ScalarProperty Name="LineOfBusiness" ColumnName="LineOfBusiness" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="BenefitFocusGroupInd" ColumnName="BenefitFocusGroupInd" />
+                <ScalarProperty Name="BenefitFocusMigrationDate" ColumnName="BenefitFocusMigrationDate" />
+                <ScalarProperty Name="PGInd" ColumnName="PGInd" />
+                <ScalarProperty Name="PGTime" ColumnName="PGTime" />
+                <ScalarProperty Name="BrokerName" ColumnName="BrokerName" />
+                <ScalarProperty Name="AccountManager" ColumnName="AccountManager" />
+                <ScalarProperty Name="FacetsMigrationDate" ColumnName="FacetsMigrationDate" />
+                <ScalarProperty Name="Frequency" ColumnName="Frequency" />
+                <ScalarProperty Name="FeedType" ColumnName="FeedType" />
+                <ScalarProperty Name="ExpectedReceiptDay" ColumnName="ExpectedReceiptDay" />
+                <ScalarProperty Name="ExpectedRunDay" ColumnName="ExpectedRunDay" />
+                <ScalarProperty Name="FileType" ColumnName="FileType" />
+                <ScalarProperty Name="CustomProcess" ColumnName="CustomProcess" />
+                <ScalarProperty Name="FileFormat" ColumnName="FileFormat" />
+                <ScalarProperty Name="SpecialHandlingInstrc" ColumnName="SpecialHandlingInstrc" />
+                <ScalarProperty Name="Vendor" ColumnName="Vendor" />
+                <ScalarProperty Name="VendorEffectiveDate" ColumnName="VendorEffectiveDate" />
+                <ScalarProperty Name="VendorTermDate" ColumnName="VendorTermDate" />
+                <ScalarProperty Name="MainVendorContact" ColumnName="MainVendorContact" />
+                <ScalarProperty Name="MainVendorPhone" ColumnName="MainVendorPhone" />
+                <ScalarProperty Name="MainVendorEmail" ColumnName="MainVendorEmail" />
+                <ScalarProperty Name="SecondVendorName" ColumnName="SecondVendorName" />
+                <ScalarProperty Name="SecondVendorPhone" ColumnName="SecondVendorPhone" />
+                <ScalarProperty Name="SecondVendorEmail" ColumnName="SecondVendorEmail" />
+                <ScalarProperty Name="TrasnferMethod" ColumnName="TrasnferMethod" />
+                <ScalarProperty Name="FTPLogin" ColumnName="FTPLogin" />
+                <ScalarProperty Name="FTPPassword" ColumnName="FTPPassword" />
+                <ScalarProperty Name="FTPFolder" ColumnName="FTPFolder" />
+                <ScalarProperty Name="StatusInd" ColumnName="StatusInd" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="DateVerified" ColumnName="DateVerified" />
+                <ScalarProperty Name="Owner" ColumnName="Owner" />
+                <ScalarProperty Name="OwnersComments" ColumnName="OwnersComments" />
+                <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+                <ScalarProperty Name="UpdatedUserId" ColumnName="UpdatedUserId" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_FetchTradingPartnerDataById_TPM" FunctionName="HealthMonitorModel.Store.sp_FetchTradingPartnerDataById_TPM">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="HealthMonitorModel.sp_FetchTradingPartnerDataById_TPM_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Customer" ColumnName="Customer" />
+                <ScalarProperty Name="CustomerNumber" ColumnName="CustomerNumber" />
+                <ScalarProperty Name="CustomerEffectiveDate" ColumnName="CustomerEffectiveDate" />
+                <ScalarProperty Name="CustomerTermDate" ColumnName="CustomerTermDate" />
+                <ScalarProperty Name="FeedID" ColumnName="FeedID" />
+                <ScalarProperty Name="RenewalMonth" ColumnName="RenewalMonth" />
+                <ScalarProperty Name="MembershipCount" ColumnName="MembershipCount" />
+                <ScalarProperty Name="LineOfBusiness" ColumnName="LineOfBusiness" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="BenefitFocusGroupInd" ColumnName="BenefitFocusGroupInd" />
+                <ScalarProperty Name="BenefitFocusMigrationDate" ColumnName="BenefitFocusMigrationDate" />
+                <ScalarProperty Name="PGInd" ColumnName="PGInd" />
+                <ScalarProperty Name="PGTime" ColumnName="PGTime" />
+                <ScalarProperty Name="BrokerName" ColumnName="BrokerName" />
+                <ScalarProperty Name="AccountManager" ColumnName="AccountManager" />
+                <ScalarProperty Name="FacetsMigrationDate" ColumnName="FacetsMigrationDate" />
+                <ScalarProperty Name="Frequency" ColumnName="Frequency" />
+                <ScalarProperty Name="FeedType" ColumnName="FeedType" />
+                <ScalarProperty Name="ExpectedReceiptDay" ColumnName="ExpectedReceiptDay" />
+                <ScalarProperty Name="ExpectedRunDay" ColumnName="ExpectedRunDay" />
+                <ScalarProperty Name="FileType" ColumnName="FileType" />
+                <ScalarProperty Name="CustomProcess" ColumnName="CustomProcess" />
+                <ScalarProperty Name="FileFormat" ColumnName="FileFormat" />
+                <ScalarProperty Name="SpecialHandlingInstrc" ColumnName="SpecialHandlingInstrc" />
+                <ScalarProperty Name="Vendor" ColumnName="Vendor" />
+                <ScalarProperty Name="VendorEffectiveDate" ColumnName="VendorEffectiveDate" />
+                <ScalarProperty Name="VendorTermDate" ColumnName="VendorTermDate" />
+                <ScalarProperty Name="MainVendorContact" ColumnName="MainVendorContact" />
+                <ScalarProperty Name="MainVendorPhone" ColumnName="MainVendorPhone" />
+                <ScalarProperty Name="MainVendorEmail" ColumnName="MainVendorEmail" />
+                <ScalarProperty Name="SecondVendorName" ColumnName="SecondVendorName" />
+                <ScalarProperty Name="SecondVendorPhone" ColumnName="SecondVendorPhone" />
+                <ScalarProperty Name="SecondVendorEmail" ColumnName="SecondVendorEmail" />
+                <ScalarProperty Name="TrasnferMethod" ColumnName="TrasnferMethod" />
+                <ScalarProperty Name="FTPLogin" ColumnName="FTPLogin" />
+                <ScalarProperty Name="FTPPassword" ColumnName="FTPPassword" />
+                <ScalarProperty Name="FTPFolder" ColumnName="FTPFolder" />
+                <ScalarProperty Name="StatusInd" ColumnName="StatusInd" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="DateVerified" ColumnName="DateVerified" />
+                <ScalarProperty Name="Owner" ColumnName="Owner" />
+                <ScalarProperty Name="OwnersComments" ColumnName="OwnersComments" />
+                <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+                <ScalarProperty Name="UpdatedUserId" ColumnName="UpdatedUserId" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

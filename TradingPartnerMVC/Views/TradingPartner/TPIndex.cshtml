@@ -1,0 +1,222 @@
+﻿
+@{
+    ViewBag.Title = "TPIndex";
+}
+
+
+
+<!--Kendo ui elements-->
+<!--Here k-options is kendo angular directive-->
+<div class="row">
+    <div class="col-md-12">
+        <div id="example" ng-app="TPapp">
+            <h3>CRUD operations on Kendo grid using Angualr JS & webapi</h3>
+            <div ng-controller="TPController">
+                <kendo-grid k-options="mainGridOptions"> </kendo-grid>
+                <!--nested grid template start-->
+                @*<div k-detail-template>
+                        <div>
+                            <div kendo-grid k-options="subgridOptions(dataItem)">
+                            </div>
+                        </div>
+                    </div>*@
+                <!--nested grid template end-->
+                <script type="text/x-kendo-template" id="template">
+
+                    <div class="tabstrip">
+                        <ul>
+                            <li class="k-state-active">
+                                General Information
+                            </li>
+                            <li>
+                                Customer Information
+                            </li>
+                            <li>
+                                Vendor Information
+                            </li>
+                            <li>
+                                File Information
+                            </li>
+                            <li>
+                                FTP
+                            </li>
+                            <li>
+                                Audit Trail
+                            </li>
+                            <li>
+                                Other Information
+                            </li>
+                        </ul>
+                        <div>
+                            <div class="general">
+                                <label>FeedCode:</label>#= FeedID #
+                            </div>
+
+
+                        </div>
+                        <div>
+                            <div class='custinfo'>
+                                <label>Account Manager:</label>#= AccountManager #
+
+
+                            </div>
+                        </div>
+                        <div>
+                            <label>Main Vendor Contact:</label>#= MainVendorContact #
+                            <label>Main Vendor Phone:</label>#= MainVendorPhone #
+                        </div>
+                    </div>
+                   
+
+
+                </script>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    function detailInit(e) {
+        var detailRow = e.detailRow;
+
+        detailRow.find(".tabstrip").kendoTabStrip({
+            animation: {
+                open: { effects: "fadeIn" }
+            }
+        });
+    }
+    //Create a anular app and controller add kendo dependency to app
+    angular.module("TPapp", ["kendo.directives"])
+            .controller("TPController", function ($scope) {
+                var tradeServiceBaseUrl = "/api/TradingService";
+                //specify kendo grid options
+                $scope.mainGridOptions = {
+                    dataSource: {
+                        type: "json",   //data type
+                        transport: {
+                            destroy: {
+                                url: tradeServiceBaseUrl,
+                                type: "DELETE"
+                            }, read: {
+                                url: tradeServiceBaseUrl,
+                                dataType: "json",
+                            },
+                            create:
+                            {
+                                url: tradeServiceBaseUrl,
+                                type: "POST"
+                            },
+                            update:
+                            {
+                                url: tradeServiceBaseUrl,
+                                type: "PUT",
+                                parameterMap: function (options, operation) {
+                                    if (operation !== "read" && options.models) {
+                                        return {
+                                            models: kendo.stringify(options.models)
+                                        };
+                                    }
+                                }
+                            },
+                        },
+                        schema: //schema of the table data
+                                 {
+                                     model:
+                                     {
+                                         id: "ID",
+                                         fields: {
+
+                                             Customer: { type: "string", validation: { required: true } },
+                                             CustomerNumber: { editable: false, validation: { required: true } },
+                                             CustomerEffectiveDate: { type: "date" },
+                                             Vendor: { type: "string" }
+                                         }
+                                     }
+                                 },
+                        pageSize: 20,
+                        //serverPaging: true,
+                        serverSorting: true
+                    },
+                    //add this code in maingrid options
+                    dataBound: function () {
+                        this.expandRow(this.tbody.find("tr.k-master-row").first());
+                    },
+                    detailTemplate: kendo.template($("#template").html()),
+                    detailInit: detailInit,
+                    editable: "popup",      //editable type popup/inline/batch
+                    toolbar: ["create"],    //toolbar options
+                    sortable: {
+                        mode: "single",  //sorting
+                        allowUnsort: true
+                    },
+                    pageable: true,
+                    resizeable: true,       //resizing
+                    scrollable: false,
+                    //specify columns that you want to display
+                    columns: [
+                   {
+                       field: "CustomerNumber", title: "CustomerNumber"
+                   },
+                   {
+                       field: "Customer", title: "Customer Name"
+                   },
+                   {
+                       field: "CustomerEffectiveDate",
+                       title: "Customer Effective Date",
+                       type: "date",
+                       format: "{0:yyyy-MM-dd}"
+                   },
+
+                    { command: ["edit", "destroy"], title: "Actions;", width: "250px" }
+                    ]
+                };
+
+                //nested grid oprtions
+                //$scope.subgridOptions = function (dataItem) {
+                //    return {
+                //        dataSource: {
+                //            type: "json",
+                //            transport: {
+                //                read: {
+                //                    url: "/api/TStudentsAPI/StudentDetails/" + dataItem.StudentID,
+                //                    dataType: "json"
+                //                }
+                //            },
+                //            serverPaging: true,
+                //            serverSorting: true,
+                //            serverFiltering: true,
+                //            pageSize: 5,
+                //        },
+                //        scrollable: false,
+                //        sortable: true,
+                //        pageable: true,
+                //        columns: [
+                //        {
+                //            field: "DetailsID",
+                //            title: "DetailsID",
+                //            width: "180px"
+                //        },
+                //        {
+                //            field: "CompanyName",
+                //            title: "Company Name",
+                //            width: "180px"
+                //        },
+                //        {
+                //            field: "Salary",
+                //            title: "Salary",
+                //            width: "180px"
+                //        },
+                //        {
+                //            field: "Location",
+                //            title: "Location",
+                //            width: "180px"
+                //        },
+
+                //        ]
+                //    }
+                //};
+
+            });
+</script>

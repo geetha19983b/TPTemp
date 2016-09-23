@@ -1,0 +1,127 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<div id="grid"></div>
+
+
+<!-- popup editor template -->
+<script id="popup_editor" type="text/x-kendo-template">
+    <p>Custom editor template</p>
+
+
+    <div class="k-edit-label">
+        <label for="Vendor" style="color: red;">Vendor</label>
+    </div>
+
+    <input type="text" class="k-input k-textbox" name="Vendor" data-bind="value:Vendor">
+
+
+</script>
+<script>
+        //kendo.culture("en-GB");
+
+                       
+                        var tradeServiceBaseUrl = "/api/TradingService",
+
+                            dataSource = new kendo.data.DataSource({
+                                transport: {
+                                    read:  {
+                                        //url: crudServiceBaseUrl + "/Products",
+                                        url: tradeServiceBaseUrl,
+                                        dataType: "json"
+                                    },
+                                    //update: {
+                                    //    url: crudServiceBaseUrl + "/Products/Update",
+                                    //    dataType: "jsonp"
+                                    //},
+                                    //destroy: {
+                                    //    url: crudServiceBaseUrl + "/Products/Destroy",
+                                    //    dataType: "jsonp"
+                                    //},
+                                    //create: {
+                                    //    url: crudServiceBaseUrl + "/Products/Create",
+                                    //    dataType: "jsonp"
+                                    //},
+                                    parameterMap: function (options, operation) {
+                                        //if (operation != "read") {
+                                        //    var d = new Date(options.models.CustomerEffectiveDate);
+                                        //    options.CustomerEffectiveDate = kendo.toString(new Date(d), "dd/MM/yyyy");
+                                        //    return options;
+                                        //}
+                                        if (operation !== "read" && options.models) {
+
+                                            return {models: kendo.stringify(options.models)};
+                                        }
+                                    }
+                                },
+                                batch: true,
+                                pageSize: 20,
+                                schema: {
+                                    model: {
+                                        id: "ID",
+                                        fields: {
+                                            Customer: { type: "string", validation: { required: true } },
+                                            CustomerNumber: { editable: false, validation: { required: true } },
+                                            CustomerEffectiveDate: { type: "date" },
+                                            Vendor: {type:"string"}
+                                            //VendorEffectiveDate: { type: "date" },
+                                            //VendorTermDate: { type: "date" }
+                                            //FeedID:{type:"string"},
+                                            //RenewalMonth: { type: "date" },
+                                            //LineOfBusines : {type: "string"},
+                                            //Status : {type:"string"}
+                                            //UnitPrice: { type: "number", validation: { required: true, min: 1} },
+                                            //Discontinued: { type: "boolean" },
+                                            //UnitsInStock: { type: "number", validation: { min: 0, required: true } }
+                                        }
+                                    }
+                                }
+                            });
+                        $(document).ready(function () {
+                        $("#grid").kendoGrid({
+                            dataSource: dataSource,
+                            pageable: true,
+                            editable: {
+                                mode: "popup",
+                                template: kendo.template($("#popup_editor").html())
+                            },
+                            height: 550,
+                            toolbar: ["create"],
+                            columns: [
+                                { field: "CustomerNumber", title: "CustomerNumber" },
+                                { field: "Customer", title: "Customer Name" },
+                                {
+                                    field: "CustomerEffectiveDate",
+                                    title: "Customer Effective Date",
+                                    type: "date",
+                                    //template: '#= kendo.toString(CustomerEffectiveDate,"MM/dd/yyyy") #'
+                                    format:"{0:yyyy-MM-dd}"
+                                },
+                                //{ field: "Vendor", title: "Vendor" },
+                                // {
+                                //     field: "VendorEffectiveDate",
+                                //     title: "Vendor Effective Date",
+                                //     template: '#= kendo.toString(BirthDate,"MM/dd/yyyy") #'
+                                // },
+                                // {
+                                //     field: "VendorTermDate",
+                                //      title: "Vendor Effective Date",
+                                //      template: '#= kendo.toString(BirthDate,"MM/dd/yyyy") #'
+                                // },
+                                 //{ field: "FeedID", title: "Feed Code" },
+                                 //{ field: "RenewalMonth", title: "Renewal Month" },
+                                 //{ field: "LineOfBusiness", title: "Line Of Business" },
+                                 //{ field: "Status", title: "Status" },
+                                //{ field: "UnitPrice", title:"Unit Price", format: "{0:c}", width: "120px"  },
+                                //{ field: "UnitsInStock", title:"Units In Stock", width: "120px" },
+                                //{ field: "Discontinued", width: "120px"  },
+                                { command: ["edit", "destroy"], title: "&nbsp;", width: "250px" }]
+                            //editable: "popup"
+                        });
+                    });
+</script>
+
