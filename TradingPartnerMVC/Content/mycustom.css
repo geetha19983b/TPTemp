@@ -1,6 +1,144 @@
-#cars {
-	width: 650px;
-}
+﻿
 .k-window-titlebar {
     height: "2.0 em";
 }
+.with-pad {
+    margin-top:10px;
+}
+
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 30px;
+  background-color: #808080;
+}
+
+.panel-green {
+    border-color: #5cb85c;
+}
+
+.panel-green .panel-heading {
+    border-color: #5cb85c;
+    color: #fff;
+    background-color: #5cb85c;
+}
+
+.panel-green a {
+    color: #5cb85c;
+}
+
+.panel-green a:hover {
+    color: #3d8b3d;
+}
+
+.panel-red {
+    border-color: #d9534f;
+}
+
+.panel-red .panel-heading {
+    border-color: #d9534f;
+    color: #fff;
+    background-color: #d9534f;
+}
+
+.panel-red a {
+    color: #d9534f;
+}
+
+.panel-red a:hover {
+    color: #b52b27;
+}
+
+.panel-yellow {
+    border-color: #f0ad4e;
+}
+
+.panel-yellow .panel-heading {
+    border-color: #f0ad4e;
+    color: #fff;
+    background-color: #f0ad4e;
+}
+
+.panel-yellow a {
+    color: #f0ad4e;
+}
+
+.panel-yellow a:hover {
+    color: #df8a13;
+}
+@charset "UTF-8";
+
+.glyphicon-bell:before {
+  content: "🔔";
+}
+.glyphicon-bookmark:before {
+  content: "🔖";
+}
+.glyphicon-briefcase:before {
+  content: "💼";
+}
+.glyphicon-calendar:before {
+  content: "📅";
+}
+.glyphicon-camera:before {
+  content: "📷";
+}
+.glyphicon-fire:before {
+  content: "🔥";
+}
+.glyphicon-lock:before {
+  content: "🔒";
+}
+.glyphicon-paperclip:before {
+  content: "📎";
+}
+.glyphicon-pushpin:before {
+  content: "📌";
+}
+.glyphicon-wrench:before {
+  content: "🔧";
+}
+.classWithPad { margin:10px; padding:10px; }
+
+/*kendo tab style override*/
+
+div#tabs li.k-item.k-state-default.k-state-hover {
+   background-color:#261758 !important;
+}
+
+div#tabs li.k-item.k-state-default.k-tab-on-top.k-state-active {
+    background-color:#615192 !important;
+}
+
+div#tabs li.k-item.k-state-default {
+    background-color:#887CAF;
+    color: white !important;
+   height: 50px;
+   width: 100px;
+   margin-right: 5px;
+   margin-bottom:2px;
+  
+   background-image: none !important;
+   border-radius:10px;
+}
+.k-grid-header .k-header{
+    background-color:#3f51b5;
+    color:white;
+}
+.k-grid-header th.k-header>.k-link
+{
+    color:white;
+    font-weight:bold;
+}
+

@@ -1,0 +1,207 @@
+﻿<#@ template language="C#" debug="false" hostspecific="true"#>
+<#@ output extension=".js" encoding="utf-8"#>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="EnvDTE"#>
+<#@ import namespace="System" #>
+<#@ import namespace="System.IO" #>
+<#@ import namespace="System.Globalization" #>
+<#@ import namespace="System.Text"#>
+<#
+
+var suffix = ".tmpl.html";
+var root = "templates";
+var project = Host.ResolveAssemblyReference("$(ProjectDir)");
+
+var serviceProvider = Host as IServiceProvider;
+var dte = serviceProvider == null ? null :
+  (EnvDTE.DTE)serviceProvider.GetService(typeof(EnvDTE.DTE));
+
+var rootPath = string.IsNullOrEmpty(root) ? 
+  project : Path.Combine(project, root);
+
+var c = rootPath[rootPath.Length - 1];
+
+if ((c != Path.DirectorySeparatorChar) && 
+  (c != Path.AltDirectorySeparatorChar) && 
+  (c != Path.VolumeSeparatorChar))
+{
+  rootPath += Path.DirectorySeparatorChar;
+}
+
+var rootUri = new Uri(rootPath);
+
+#>
+document.write('<#
+
+foreach(var path in 
+  Directory.EnumerateFiles(
+    rootPath, 
+    "*" + suffix, 
+    SearchOption.AllDirectories))
+{
+  if ((dte == null) || (dte.Solution.FindProjectItem(path) != null))
+  {
+    var pathUri = new Uri(path);
+    var relativeUri = rootUri.MakeRelativeUri(pathUri);
+    var relativePath = Uri.UnescapeDataString(relativeUri.ToString());
+    var id = relativePath.Substring(0, relativePath.Length - suffix.Length);
+    var value = File.ReadAllText(path);
+    var bodyStart = value.IndexOf(
+      "<body", 
+      StringComparison.InvariantCultureIgnoreCase);
+
+    if (bodyStart != -1)
+    {
+      bodyStart = value.IndexOf('>', bodyStart);
+
+      if (bodyStart != -1)
+      {
+        var bodyEnd = value.LastIndexOf(
+          "</body>", 
+          StringComparison.InvariantCultureIgnoreCase);
+
+        if (bodyEnd > bodyStart)
+        {
+          value = 
+            value.Substring(bodyStart + 1, bodyEnd - bodyStart - 1).Trim();
+        }
+      }
+    }
+
+    Write("<script id=\"");
+    Write(Escape(id));
+    Write("-template\" type=\"text/x-kendo-template\">");
+    Write(Escape(value, 2));
+    Write("</script>");
+  }
+}
+
+#>');
+
+<#+
+
+private static string Escape(string value, int options = 1)
+{
+  if (value == null)
+  {
+    return null;
+  }
+
+  StringBuilder builder = null;
+  int startIndex = 0;
+  int count = 0;
+  String escape;
+  
+  for(int i = 0; i < value.Length; i++)
+  {
+    var c = value[i];
+
+    switch(c)
+    {
+      case '\b':
+      {
+        escape = "\\b";
+
+        break;
+      }
+      case '\t':
+      {
+        escape = "\\t";
+
+        break;
+      }
+      case '\n':
+      {
+        escape = "\\n";
+
+        break;
+      }
+      case '\f':
+      {
+        escape = "\\f";
+
+        break;
+      }
+      case '\r':
+      {
+        escape = "\\r";
+
+        break;
+      }
+      case '"':
+      {
+        if ((options & 1) == 0)
+        {
+          goto default;
+        }
+
+        escape = "\\\"";
+
+        break;
+      }
+      case '\'':
+      {
+        if ((options & 2) == 0)
+        {
+          goto default;
+        }
+
+        escape = "\\'";
+
+        break;
+      }
+      case '\\':
+      {
+        escape = "\\\\";
+
+        break;
+      }
+      default:
+      {
+        if (c < ' ')
+        {
+          int code = c;
+
+          escape = "\\x" + code.ToString("x2", CultureInfo.InvariantCulture);
+
+          break;
+        }
+        else
+        {
+          count++;
+
+          continue;
+        }
+      }
+    }
+
+    if (builder == null)
+    {
+      builder = new StringBuilder(value.Length + 5);
+    }
+      
+    if (count > 0)
+    {
+      builder.Append(value, startIndex, count);
+    }
+
+    builder.Append(escape);
+      
+    startIndex = i + 1;
+    count = 0;
+  }
+
+  if (builder == null)
+  {
+    return value;
+  }
+
+  if (count > 0)
+  {
+    builder.Append(value, startIndex, count);
+  }
+
+  return builder.ToString();
+}
+
+#>

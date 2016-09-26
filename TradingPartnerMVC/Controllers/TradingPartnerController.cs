@@ -17,5 +17,10 @@ namespace TradingPartnerMVC.Controllers
         {
             return View();
         }
+        public ActionResult TradingPartner()
+        {
+            return View();
+        }
+
     }
 }

@@ -20,6 +20,52 @@
           <Parameter Name="lineOFBusiness" Type="varchar" Mode="In" />
           <Parameter Name="fileType" Type="varchar" Mode="In" />
         </Function>
+        <Function Name="sp_UpdateTradingPartnerData_TPM" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Customer" Type="varchar" Mode="In" />
+          <Parameter Name="CustomerNumber" Type="varchar" Mode="In" />
+          <Parameter Name="EffectiveDate" Type="date" Mode="In" />
+          <Parameter Name="TerminationDate" Type="date" Mode="In" />
+          <Parameter Name="RenewalMonth" Type="varchar" Mode="In" />
+          <Parameter Name="FeedID" Type="varchar(max)" Mode="In" />
+          <Parameter Name="IMStaffid" Type="varchar" Mode="In" />
+          <Parameter Name="BenefitFocusGroupInd" Type="bit" Mode="In" />
+          <Parameter Name="BenefitFocusMigrationDate" Type="date" Mode="In" />
+          <Parameter Name="PGInd" Type="bit" Mode="In" />
+          <Parameter Name="PGTime" Type="ntext" Mode="In" />
+          <Parameter Name="feed_type" Type="varchar" Mode="In" />
+          <Parameter Name="Frequency" Type="varchar" Mode="In" />
+          <Parameter Name="ExpectedReceiptDay" Type="varchar" Mode="In" />
+          <Parameter Name="ExpectedRunDay" Type="varchar" Mode="In" />
+          <Parameter Name="FileType" Type="varchar" Mode="In" />
+          <Parameter Name="FileFormat" Type="varchar" Mode="In" />
+          <Parameter Name="SpecialHandlingInstrc" Type="ntext" Mode="In" />
+          <Parameter Name="Vendor" Type="varchar" Mode="In" />
+          <Parameter Name="VendorEffectiveDate" Type="date" Mode="In" />
+          <Parameter Name="VendorTerminationDate" Type="date" Mode="In" />
+          <Parameter Name="TransferMethod" Type="varchar" Mode="In" />
+          <Parameter Name="FTPLogin" Type="varchar" Mode="In" />
+          <Parameter Name="FTPPassword" Type="varchar" Mode="In" />
+          <Parameter Name="FTPFolder" Type="varchar" Mode="In" />
+          <Parameter Name="StatusInd" Type="varchar" Mode="In" />
+          <Parameter Name="Status" Type="varchar" Mode="In" />
+          <Parameter Name="DateVerified" Type="datetime2" Mode="In" />
+          <Parameter Name="Owner" Type="varchar(max)" Mode="In" />
+          <Parameter Name="OwnersComments" Type="varchar(max)" Mode="In" />
+          <Parameter Name="UserId" Type="varchar" Mode="In" />
+          <Parameter Name="MainVendorContact" Type="varchar" Mode="In" />
+          <Parameter Name="MainVendorPhone" Type="varchar" Mode="In" />
+          <Parameter Name="MainVendorEmail" Type="varchar" Mode="In" />
+          <Parameter Name="SecondVendorName" Type="varchar" Mode="In" />
+          <Parameter Name="SecondVendorPhone" Type="varchar" Mode="In" />
+          <Parameter Name="SecondVendorEmail" Type="varchar" Mode="In" />
+          <Parameter Name="line_of_business" Type="varchar" Mode="In" />
+          <Parameter Name="AccountManager" Type="varchar" Mode="In" />
+          <Parameter Name="Broker" Type="varchar" Mode="In" />
+          <Parameter Name="MemberShipCount" Type="int" Mode="In" />
+          <Parameter Name="Notes" Type="varchar(max)" Mode="In" />
+          <Parameter Name="FacetsMigrationdate" Type="varchar(max)" Mode="In" />
+          <Parameter Name="CustomProcess" Type="varchar(max)" Mode="In" />
+        </Function>
         <EntityContainer Name="HealthMonitorModelStoreContainer" />
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -39,7 +85,53 @@
             <Parameter Name="fileType" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_FetchTradingPartnerDataById_TPM" ReturnType="Collection(HealthMonitorModel.sp_FetchTradingPartnerDataById_TPM_Result)">
-            <Parameter Name="Id" Mode="In" Type="Int32" />
+          <Parameter Name="Id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_UpdateTradingPartnerData_TPM">
+            <Parameter Name="Customer" Mode="In" Type="String" />
+            <Parameter Name="CustomerNumber" Mode="In" Type="String" />
+            <Parameter Name="EffectiveDate" Mode="In" Type="DateTime" />
+            <Parameter Name="TerminationDate" Mode="In" Type="DateTime" />
+            <Parameter Name="RenewalMonth" Mode="In" Type="String" />
+            <Parameter Name="FeedID" Mode="In" Type="String" />
+            <Parameter Name="IMStaffid" Mode="In" Type="String" />
+            <Parameter Name="BenefitFocusGroupInd" Mode="In" Type="Boolean" />
+            <Parameter Name="BenefitFocusMigrationDate" Mode="In" Type="DateTime" />
+            <Parameter Name="PGInd" Mode="In" Type="Boolean" />
+            <Parameter Name="PGTime" Mode="In" Type="String" />
+            <Parameter Name="feed_type" Mode="In" Type="String" />
+            <Parameter Name="Frequency" Mode="In" Type="String" />
+            <Parameter Name="ExpectedReceiptDay" Mode="In" Type="String" />
+            <Parameter Name="ExpectedRunDay" Mode="In" Type="String" />
+            <Parameter Name="FileType" Mode="In" Type="String" />
+            <Parameter Name="FileFormat" Mode="In" Type="String" />
+            <Parameter Name="SpecialHandlingInstrc" Mode="In" Type="String" />
+            <Parameter Name="Vendor" Mode="In" Type="String" />
+            <Parameter Name="VendorEffectiveDate" Mode="In" Type="DateTime" />
+            <Parameter Name="VendorTerminationDate" Mode="In" Type="DateTime" />
+            <Parameter Name="TransferMethod" Mode="In" Type="String" />
+            <Parameter Name="FTPLogin" Mode="In" Type="String" />
+            <Parameter Name="FTPPassword" Mode="In" Type="String" />
+            <Parameter Name="FTPFolder" Mode="In" Type="String" />
+            <Parameter Name="StatusInd" Mode="In" Type="String" />
+            <Parameter Name="Status" Mode="In" Type="String" />
+            <Parameter Name="DateVerified" Mode="In" Type="DateTime" />
+            <Parameter Name="Owner" Mode="In" Type="String" />
+            <Parameter Name="OwnersComments" Mode="In" Type="String" />
+            <Parameter Name="UserId" Mode="In" Type="String" />
+            <Parameter Name="MainVendorContact" Mode="In" Type="String" />
+            <Parameter Name="MainVendorPhone" Mode="In" Type="String" />
+            <Parameter Name="MainVendorEmail" Mode="In" Type="String" />
+            <Parameter Name="SecondVendorName" Mode="In" Type="String" />
+            <Parameter Name="SecondVendorPhone" Mode="In" Type="String" />
+            <Parameter Name="SecondVendorEmail" Mode="In" Type="String" />
+            <Parameter Name="line_of_business" Mode="In" Type="String" />
+            <Parameter Name="AccountManager" Mode="In" Type="String" />
+            <Parameter Name="Broker" Mode="In" Type="String" />
+            <Parameter Name="MemberShipCount" Mode="In" Type="Int32" />
+            <Parameter Name="Notes" Mode="In" Type="String" />
+            <Parameter Name="FacetsMigrationdate" Mode="In" Type="String" />
+            <Parameter Name="CustomProcess" Mode="In" Type="String" />
           </FunctionImport>
         </EntityContainer>
         <ComplexType Name="sp_FetchTradingPartnerData_TPM_Result">
@@ -252,6 +344,7 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_UpdateTradingPartnerData_TPM" FunctionName="HealthMonitorModel.Store.sp_UpdateTradingPartnerData_TPM" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

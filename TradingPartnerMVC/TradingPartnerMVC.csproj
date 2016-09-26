@@ -189,6 +189,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Common\Pagination.cs" />
     <Compile Include="Models\FetchTradingPartner.cs" />
     <Compile Include="Models\HealthMonitor.Context.cs">
       <AutoGen>True</AutoGen>
@@ -213,10 +214,27 @@
     <Compile Include="Models\sp_FetchTradingPartnerData_TPM_Result.cs">
       <DependentUpon>HealthMonitor.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\TradingPartnerSearchVM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="appScripts\app.js" />
+    <Content Include="appScripts\Common\Resources\TradingPartnerResource.js" />
+    <Content Include="appScripts\Common\Services\APIService.js" />
+    <Content Include="appScripts\Common\Services\RegexService.js" />
+    <Content Include="appScripts\Common\templateLoader.js" />
+    <Content Include="appScripts\TradingPartner\TradingPartnerController.js" />
+    <Content Include="Scripts\templates.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>templates.tt</DependentUpon>
+    </Content>
+    <Content Include="Scripts\templates.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>templates.js</LastGenOutput>
+    </Content>
+    <Content Include="templates\TradingPartnerDetail.tmpl.html" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\kendostyles\Black\editor.png" />
@@ -577,6 +595,8 @@
     <Content Include="Scripts\angular-animate.min.js" />
     <Content Include="Scripts\angular-aria.js" />
     <Content Include="Scripts\angular-aria.min.js" />
+    <Content Include="Scripts\angular-block-ui\css\angular-block-ui.css" />
+    <Content Include="Scripts\angular-block-ui\js\angular-block-ui.js" />
     <Content Include="Scripts\angular-cookies.js" />
     <Content Include="Scripts\angular-cookies.min.js" />
     <Content Include="Scripts\angular-csp.css" />
@@ -2082,6 +2102,7 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\ui-bootstrap-tpls-1.3.3.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -2242,6 +2263,8 @@
     <Content Include="Scripts\kendoscripts\kendo.window.min.js.map" />
     <Content Include="Views\TradingPartner\TPIndex.cshtml" />
     <Content Include="Scripts\version.json" />
+    <Content Include="Views\TradingPartner\TradingPartner.cshtml" />
+    <Content Include="Static\TradingPartnerAddEditWizard.html" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

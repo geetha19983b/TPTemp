@@ -1,0 +1,29 @@
+﻿<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" bs-tooltip data-placement="bottom" data-title="Click to close" ng-click="cancel()">&times;</button>
+    <h4 class="modal-title">{{ editMode ? "Edit Trading Partner":"Add New Trading Partner" }} </h4>
+</div>
+<div class="modal-body">
+    <form name="wizardForm" date-restriction model="dataModel">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group-sm" ng-class="{'has-error':wizardForm.CustomerNumber.$invalid && wizardForm.CustomerNumber.$dirty}">
+                    <label for="CustomerNumber">CustomerNumber&nbsp;&nbsp;<i class="glyphicon glyphicon-star mandatory" ng-hide="editMode"></i></label>
+                    <input type="text" name="code1" class="form-control" id="CustomerNumber" ng-model="dataModel.CustomerNumber" ng-pattern="codeRegex" ng-required="!editMode" ng-readonly="editMode" />
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group-sm" ng-class="{'has-error':wizardForm.Customer.$invalid && wizardForm.Customer.$dirty}">
+                    <label for="Customer">Customer Name&nbsp;&nbsp;<i class="glyphicon glyphicon-star mandatory" ng-hide="editMode"></i></label>
+                    <input type="text" name="Customer" class="form-control" id="Customer"  ng-model="dataModel.Customer"
+                          ng-pattern="codeRegex" ng-required="!editMode" />
+                 
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-warning" ng-click="cancel()" id="btn-width"><i class='fa fa-close'></i> CANCEL</button>
+    <button class="btn btn-primary" ng-click="save()" ng-disabled="wizardForm.$invalid || wizardForm.$pristine" disabled="disabled" id="btn-width"><i ng-show="!wizardForm.$invalid && !wizardForm.$pristine" class='fa fa-save'></i><i class="fa fa-ban" ng-show="wizardForm.$invalid || wizardForm.$pristine"></i> SAVE</button>
+</div>
+

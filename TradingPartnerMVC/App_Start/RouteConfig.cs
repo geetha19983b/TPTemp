@@ -12,7 +12,8 @@ namespace TradingPartnerMVC
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-
+            //exclude template folder from routing
+            routes.IgnoreRoute("Static/{*pathInfo}");
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

@@ -1,0 +1,161 @@
+﻿
+   
+<div ng-controller="TradingPartnerController">
+    <div class="panel panel-primary small with-pad">
+        <div class="panel-heading">Search Trading Partner</div>
+        <div class="panel-body">
+            <div class="form-inline">
+                <form name="tradingPartner" ng-submit="searchCode()">
+
+                    <div class="form-group" ng-class="{'has-error':tradingPartner.CustomerID.$invalid && tradingPartner.CustomerID.$dirty}">
+
+                        <input type="text" name="CustomerID" class="col-xs-4 form-control input-sm" id="CustomerID" placeholder="CustomerNumber" ng-pattern="searchCodeRegex" ng-model="searchTradingPartner.CustomerNumber" />
+                    </div>
+                    <div class="form-group" ng-class="{'has-error':tradingPartner.CustomerName.$invalid && tradingPartner.CustomerName.$dirty }">
+
+                        <input type="text" name="CustomerName" class="col-xs-4 form-control input-sm" id="CustomerName" placeholder="CustomerName" ng-pattern="searchCodeRegex" ng-model="searchTradingPartner.Customer">
+                    </div>
+
+
+                    <div class="form-group">
+                        <div class="col-xs-4">
+                            <button type="submit" id="Search" value="Search" class="btn btn-sm btn-success" ng-disabled="tradingPartner.$invalid">
+                                <span class="glyphicon glyphicon-search"></span>
+
+                            </button>
+
+                        </div>
+                        <div class="col-xs-4">
+                            <button type="submit" id="Reset" value="Reset" class="btn btn-sm btn-warning" ng-click="reset()">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+
+                            </button>
+                        </div>
+
+                    </div>
+
+
+
+                </form>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="row">
+        <kendo-grid options="gridOptions" id="TradingPartnerGrid" />
+        <div  data-template="TradingPartnerDetail-template"></div>
+        @*templateLoader.loadExtTemplate("TradingPartnerDetail.tmpl.htm");*@
+
+        <script type="text/x-kendo-template" id="template">
+
+                <div class="tabstrip" id="tabs">
+                    <ul>
+                        <li class="k-state-active">
+                            General Information
+                        </li>
+                        <li>
+                            Customer Information
+                        </li>
+                        <li>
+                            Vendor Information
+                        </li>
+                        <li>
+                            File Information
+                        </li>
+                        <li>
+                            FTP
+                        </li>
+                        <li>
+                            Audit Trail
+                        </li>
+                        <li>
+                            Other Information
+                        </li>
+                    </ul>
+                    <div>
+                        <div class="general">
+                            <table class="table">
+
+                                <tbody>
+                                    <tr class="success">
+                                        <td>Customer Number</td>
+                                        <td> #= CustomerNumber #</td>
+                                        <td>FeedCode</td>
+                                        <td>#= FeedID #</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr class="danger">
+                                        <td>Customer Name</td>
+                                        <td>#= Customer #</td>
+                                        <td>Customer Effective Date</td>
+                                        <td>#= CustomerEffectiveDate #</td>
+                                        <td>Line Of Business</td>
+                                        <td>#= LineOfBusiness #</td>
+                                    </tr>
+                                    <tr class="info">
+                                        <td>Vendor</td>
+                                        <td>#= Vendor #</td>
+                                        <td>Vendor Effective Date</td>
+                                        <td>#= VendorEffectiveDate #</td>
+                                        <td>Renewal Month</td>
+                                        <td>#= RenewalMonth #</td>
+                                    </tr>
+                                    <tr class="warning">
+                                        <td>Status</td>
+                                        <td>#= Status #</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+
+                        </div>
+
+
+                    </div>
+                    <div>
+                        <div class='custinfo'>
+                            <label>Account Manager:</label>#= AccountManager #
+
+
+                        </div>
+                    </div>
+                    <div>
+                        <label>Main Vendor Contact:</label>#= MainVendorContact #
+                        <label>Main Vendor Phone:</label>#= MainVendorPhone #
+                    </div>
+                    <div>
+                        <table class="table">
+
+                            <tbody>
+                                <tr class="success">
+                                    <td>John</td>
+                                    <td>Doe</td>
+                                    <td>john@example.com</td>
+                                </tr>
+                                <tr class="danger">
+                                    <td>Mary</td>
+                                    <td>Moe</td>
+                                    <td>mary@example.com</td>
+                                </tr>
+                                <tr class="info">
+                                    <td>July</td>
+                                    <td>Dooley</td>
+                                    <td>july@example.com</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+
+
+            </script>
+    </div>
+
+</div>

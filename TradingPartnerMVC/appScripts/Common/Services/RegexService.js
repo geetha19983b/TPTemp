@@ -1,0 +1,25 @@
+﻿angular.module('tPartnerApp').factory('RegexService', function () {
+    return {
+        codeRegex: /^[a-zA-Z0-9]{5}$/,
+        claimsRegex: /^[^*|\":<>[\]{}`\\()';.,/~@&$]+$/,
+        searchCodeRegex: /^[a-zA-Z0-9]*$/,
+        modifierCodeRegex: /^(([a-zA-Z0-9]{2})[;])*(([a-zA-Z0-9]{2}))$/,
+        modifierCode: /^(([a-zA-Z0-9]{2}))$/,
+        numericCodeRegex: /^[0-9]*$/,
+        billTypeRegex: /^[0-9]{3}$/,
+        numericPOSRegex: /^[0-9]{2}$/,
+        numericRCRegex: /^[0-9]{4}$/,
+        diagnosisCodeRegex: /^[a-zA-Z0-9.?]{3,8}$/,
+        serverRegEx: /^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])(\:[0-9]{1,5})?$/,
+        urlRegEx: /^(((?:http|ftp)s?:\/\/)(?:(?:[A-Z0-9](?:[A-Z0-9-]{0,61}[A-Z0-9])\.?)+(?:[A-Z]{2,6}\.?|[A-Z0-9-]{2,}\.?)|localhost|\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})(?::\d+)?(?:\/?|[\/?]\S+))(\.svc)$/i,
+        numericOrderRegex: /^[1-9]*$/,
+        serviceInstanceRegex: /^[a-zA-Z0-9_]$/,
+        searchRegex: /^[A-Z0-9,\s]*$/i,
+        password: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]).{6,60}$/,
+        alphawithDot: /^[a-zA-Z0-9\.]{3,8}$/,
+        emailPattern: /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/,
+        username: /^[A-Za-z_]*$/i,
+        namePattern: /^[A-Za-z_\s]*$/i,
+        procToDiagDiagnosisPattern: /^[a-zA-Z0-9.?]*$/,
+    }
+});
