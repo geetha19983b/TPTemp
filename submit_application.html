@@ -1,0 +1,1658 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>IDD Portal</title>
+
+    <!-- css -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+ <link href="css/testani.css" rel="stylesheet" />
+
+    <!-- template skin -->
+    <link id="t-colors" href="color/default.css" rel="stylesheet">
+	<style type="text/css">
+	#create_pdf 
+	 {
+    cursor: pointer;
+    }
+	
+	</style>
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-custom">
+
+    <div id="wrapper" class="bg">
+        <nav class="navbar navbar-custom fixed-top" role="navigation">
+            <div class="top-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12">
+                            <div class="row text-right">
+                                <div class="col-md-6">
+                                    <p class="text-right nowrap">Need Help? Call us now XXX XXX XXXX</p>
+                                </div>
+                                <div class="col-md-5">
+                                    <span class="hide">Change Font Size</span>
+                                    <span class="change-font">
+                                        <select class="form-control form-control-sm">
+                                            <option>Change Font Size</option>
+                                            <option>Large</option>
+                                            <option>Larger</option>
+                                            <option>Normal</option>
+                                        </select>
+                                    </span>
+                                </div>
+                                <div class="col-md-1">
+                                    <p class="text-right nowrap">Espanol</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+
+                <nav class="navbar navbar-expand-md navbar-dark">
+                    <a href="#" class="navbar-brand"><img src="img/logo1.png" alt="logo"></a>
+                    <span class="name">Department of Behavioral Health and Developmental Disabilities</span>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar7">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="navbar-collapse collapse justify-content-stretch" id="navbar7">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link top" href="">Sign In</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link top" href="#">Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link top" href="#">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </nav>
+
+
+
+        <!-- Section: intro -->
+        <div class="container pt230">
+            <div class="row mb20 mt-30">
+                <div class="col-md-12">
+                   <!--<div class="alert alert-danger" role="alert">
+                        This is a danger alert—check it out!
+                    </div>-->
+                </div>
+            </div>
+
+            <div class="row mb45">
+                <div class="col-md-12">
+				    <div class="row">
+					<div class="col-md-3">
+						
+					</div>	
+					 <div class="col-md-9">
+					   <button type="button" class="btn btn-info" id="create_pdf">Create PDF</button>
+					 </div>
+					</div>
+                    <div class="row">
+                        <div class="col-md-3">
+						 
+                            <div class="pricing-content featured">
+                              
+                            </div>
+                        </div>
+						
+                        <div class="col-md-9" id="customers" style="cursor: pointer">
+                           <!--  <div class="animationload" id="spinicon">
+								<div class="osahanloading"></div>
+							</div> -->
+                            <div class="pricing-content featured" >  
+                                <div class="tab-content" id="v-pills-tabContent">
+                                    <!--General Information-->
+                                    <div class="tab-pane fade show p25 active" id="v-pills-info" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                                        <!--page 1 starts here-->
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="pull-right">Page 1 of 2</div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="legend">All fields marked (R) are required</div>
+                                            </div>
+                                        </div>                                       
+                                        <div class="canvas">
+                                            <h2 class="header">Personal Details</h2>
+                                            <form>
+                                                <div class="p20">
+
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <label for="InputSuffix">Suffix <i class="required">(R)</i></label>
+                                                                <input type="text" class="form-control" id="InputFirstname" aria-describedby="textHelp" placeholder="Enter First Name">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-md-4 pt5">
+                                                            <div class="form-group">
+                                                                <label for="InputFirstname">First Name <i class="required">(R)</i></label>
+                                                                <input type="text" class="form-control" id="InputFirstname" aria-describedby="textHelp" placeholder="Enter First Name">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4 pt5">
+                                                            <label for="InputLasttname">Last Name <i class="required">(R)</i></label>
+                                                            <input type="text" class="form-control" id="InputLastname" aria-describedby="textHelp" placeholder="Enter Last Name">
+                                                        </div>
+                                                        <div class="col-md-4 pt5">
+                                                            <label for="InputSurname">Maiden or Birth Surname <i class="required">(R)</i></label>
+                                                            <input type="text" class="form-control" id="InputSurname" aria-describedby="textHelp" placeholder="Enter Surname">
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="row pt20">
+                                                        <div class="col-md-4">
+                                                            <label for="InputPrefname">Preferred Name <i class="required">(R)</i></label>
+                                                            <input type="text" class="form-control" id="InputPrefname" aria-describedby="textHelp" placeholder="Enter Preferred Name">
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="InputEmail pt5">Email Address <i class="required">(R)</i></label>
+                                                            <input type="email" class="form-control" id="InputEmail" aria-describedby="textHelp" placeholder="name@domain.com">
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="InputEmailconfirm pt5">Confirm Email Address <i class="required">(R)</i></label>
+                                                            <input type="text" class="form-control" id="InputEmailconfirm" aria-describedby="textHelp" placeholder="Confirm email">
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="row pt20">
+                                                        <div class="col-md-4 pt5">
+                                                            <label for="InputDOB">Date of Birth <i class="required">(R)</i></label>
+                                                            <div class="form-group">
+                                                                <div class='input-group date' id='datetimepicker1'>
+                                                                    <input type='text' class="form-control" placeholder="Enter Date of Birth" />
+                                                                    <span class="input-group-addon">
+                                                                        <span class="glyphicon glyphicon-calendar"></span>
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4 pt5">
+                                                            <label for="InputRace">Race <i class="required">(R)</i></label>
+                                                            <input type="text" class="form-control" id="InputRace" aria-describedby="textHelp" placeholder="Enter Race">
+                                                        </div>
+                                                        <div class="col-md-4 pt5">
+                                                            <label for="InputHispanic">Hispanic/Latino Origin <i class="required">(R)</i></label>
+                                                            <input type="text" class="form-control" id="InputHispanic" aria-describedby="textHelp" placeholder="Enter Hispanic/Latino Origin">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row pt20">
+                                                        <div class="col-md-4">
+                                                            <label for="InputGender">Gender <i class="required">(R)</i></label>
+                                                            <input type="text" class="form-control" id="InputGender" aria-describedby="textHelp" placeholder="Enter Gender">
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="InputMarital">Marital Status <i class="required">(R)</i></label>
+                                                            <input type="text" class="form-control" id="InputMarital" aria-describedby="textHelp" placeholder="Enter Marital Status">
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="InputLiving">Current Living Arrangement <i class="required">(R)</i></label>
+                                                            <input type="text" class="form-control" id="InputLiving" aria-describedby="textHelp" placeholder="Enter Current Living Arrangement">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row pt20">
+                                                        <div class="col-md-4">
+                                                            <label for="InputMedicare">Medicare Number <i class="required">(R)</i></label>
+                                                            <input type="text" class="form-control" id="InputMedicare" aria-describedby="textHelp" placeholder="Enter Medicare Number">
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="InputMedicaid">Medicaid Number <i class="required">(R)</i></label>
+                                                            <input type="text" class="form-control" id="InputMedicaid" aria-describedby="textHelp" placeholder="Enter Medicaid Number">
+                                                        </div>
+                                                        <div class="col-md-4"></div>
+                                                    </div>
+
+                                                    <div class="row pt20">
+                                                        <div class="col-md-12">
+                                                            <div><label>Is the applicant lawfully present in the United States</label></div>
+                                                            <div>
+                                                                <span><input type="radio" />Yes</span>
+                                                                <span class="mr10"><input type="radio" />No</span>
+                                                                <span class="mr10"><input type="radio" />N/A</span>
+                                                                <span class="mr10"><input type="radio" />Unknown/Refused</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="canvas mt20">
+                                            <h2 class="header">Mailing Address</h2>
+
+                                            <div class="p20">
+
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <label for="InputStreet">Street Address or PO Box <i class="required">(R)</i></label>
+                                                        <input type="text" class="form-control" id="InputStreet" aria-describedby="textHelp" placeholder="Enter Street Address">
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <label for="InputApt">Apt/Unit <i class="required">(R)</i></label>
+                                                        <input type="text" class="form-control" id="InputApt" aria-describedby="textHelp" placeholder="Enter Apt #">
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <label for="InputCity">Mailing City <i class="required">(R)</i></label>
+                                                        <input type="text" class="form-control" id="InputCity" aria-describedby="textHelp" placeholder="Enter City">
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="row pt20">
+                                                    <div class="col-md-4">
+                                                        <label for="InputState">Mailing State <i class="required">(R)</i></label>
+                                                        <input type="text" class="form-control" id="InputState" aria-describedby="textHelp" placeholder="Enter City">
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <label for="InputCounty">Mailing County <i class="required">(R)</i></label>
+                                                        <input type="text" class="form-control" id="InputCounty" aria-describedby="textHelp" placeholder="Enter City">
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <label for="InputZip">Zip <i class="required">(R)</i></label>
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control" placeholder="Zip Code" aria-label="zip" aria-describedby="sizing-addon2">
+                                                            <span class="input-group-addon" id="sizing-addon2">-</span>
+                                                            <input type="text" class="form-control" placeholder="Suffix" aria-label="suffix" aria-describedby="sizing-addon2">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <!--<div class="row pt20">
+                                            <div class="col-md-12">
+                                                <button type="button" class="btn btn-primary pull-right">Continue</button>
+                                            </div>
+                                        </div>-->
+                                        <!--page 1 ends here-->
+
+                                        <!--page 2 starts here-->
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="pull-right">Page 2 of 2</div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="legend">All fields marked (R) are required</div>
+                                            </div>
+                                        </div>
+                                        <div class="canvas">
+                                            <h2 class="header">Applicant's Primary Contact Details</h2>
+                                            <form>
+                                                <div class="p20">
+
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <label for="InputSuffix">Suffix <i class="required">(R)</i></label>
+                                                                <input type="text" class="form-control" id="InputFirstname" aria-describedby="textHelp" placeholder="Enter First Name">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row pt20">
+                                                        <div class="col-md-5 pt5">
+                                                            <div class="form-group">
+                                                                <label for="InputFirstname">First Name <i class="required">(R)</i></label>
+                                                                <input type="text" class="form-control" id="InputFirstname" aria-describedby="textHelp" placeholder="Enter First Name">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-3 pt5">
+                                                            <label for="InputLasttname">Middle Name <i class="required">(R)</i></label>
+                                                            <input type="text" class="form-control" id="InputLastname" aria-describedby="textHelp" placeholder="Enter Last Name">
+                                                        </div>
+                                                        <div class="col-md-4 pt5">
+                                                            <label for="InputSurname">Last Name <i class="required">(R)</i></label>
+                                                            <input type="text" class="form-control" id="InputSurname" aria-describedby="textHelp" placeholder="Enter Surname">
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="row pt20">
+                                                        <div class="col-md-4">
+                                                            <label for="InputPrefname">Relationship to Applicant <i class="required">(R)</i></label>
+                                                            <input type="text" class="form-control" id="InputPrefname" aria-describedby="textHelp" placeholder="Enter Preferred Name">
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="InputEmail pt5">Age <i class="required">(R)</i></label>
+                                                            <input type="email" class="form-control" id="InputEmail" aria-describedby="textHelp" placeholder="name@domain.com">
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label for="InputEmailconfirm pt5">Email Address <i class="required">(R)</i></label>
+                                                            <input type="text" class="form-control" id="InputEmailconfirm" aria-describedby="textHelp" placeholder="Confirm email">
+                                                        </div>
+                                                    </div> 
+
+                                                    <div class="row pt20">
+                                                        <div class="col-md-6">
+                                                            <label for="InputDiagnosis">Primary Phone Number <i class="required">(R)</i></label>
+                                                            <div class="input-group">
+                                                                <input type="text" class="form-control" placeholder="" aria-label="zip" aria-describedby="sizing-addon2">
+                                                                <span class="input-group-addon" id="sizing-addon2">-</span>
+                                                                <input type="text" class="form-control" placeholder="" aria-label="zip" aria-describedby="sizing-addon2">
+                                                                <span class="input-group-addon" id="sizing-addon2">-</span>
+                                                                <input type="text" class="form-control" placeholder="" aria-label="suffix" aria-describedby="sizing-addon2">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <label for="InputDiagnosis">Secondary Phone Number <i class="required">(R)</i></label>
+                                                            <div class="input-group">
+                                                                <input type="text" class="form-control" placeholder="" aria-label="zip" aria-describedby="sizing-addon2">
+                                                                <span class="input-group-addon" id="sizing-addon2">-</span>
+                                                                <input type="text" class="form-control" placeholder="" aria-label="zip" aria-describedby="sizing-addon2">
+                                                                <span class="input-group-addon" id="sizing-addon2">-</span>
+                                                                <input type="text" class="form-control" placeholder="" aria-label="suffix" aria-describedby="sizing-addon2">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="canvas mt20">
+                                            <h2 class="header">Primary Contact Mailing Address</h2>
+                                            <div class="p20">
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <label for="InputStreet">Street Address or PO Box <i class="required">(R)</i></label>
+                                                        <input type="text" class="form-control" id="InputStreet" aria-describedby="textHelp" placeholder="Enter Street Address">
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <label for="InputApt">Apt/Unit <i class="required">(R)</i></label>
+                                                        <input type="text" class="form-control" id="InputApt" aria-describedby="textHelp" placeholder="Enter Apt #">
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <label for="InputCity">Mailing City <i class="required">(R)</i></label>
+                                                        <input type="text" class="form-control" id="InputCity" aria-describedby="textHelp" placeholder="Enter City">
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="row pt20">
+                                                    <div class="col-md-4">
+                                                        <label for="InputState">Mailing State <i class="required">(R)</i></label>
+                                                        <input type="text" class="form-control" id="InputState" aria-describedby="textHelp" placeholder="Enter City">
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <label for="InputCounty">Mailing County <i class="required">(R)</i></label>
+                                                        <input type="text" class="form-control" id="InputCounty" aria-describedby="textHelp" placeholder="Enter City">
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <label for="InputZip">Zip <i class="required">(R)</i></label>
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control" placeholder="Zip Code" aria-label="zip" aria-describedby="sizing-addon2">
+                                                            <span class="input-group-addon" id="sizing-addon2">-</span>
+                                                            <input type="text" class="form-control" placeholder="Suffix" aria-label="suffix" aria-describedby="sizing-addon2">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+										
+                                        <!--<div class="row pt20">
+                                            <div class="col-md-12">
+                                               <div class="pull-right">
+                                                   <button type="button" class="btn btn-primary mr10">< Back</button>
+                                                   <button type="button" class="btn btn-primary mr10">Save and Continue Later</button>
+                                                   <button type="button" class="btn btn-success">Next Page ></button>
+                                               </div>
+                                            </div>
+                                        </div>-->
+										
+                                    </div>
+									<div class="row">
+                                            <div class="col-md-12">
+                                                <div class="legend">All fields marked (R) are required</div>
+                                            </div>
+                                        </div>
+                                        <div class="canvas">
+                                            <h2 class="header">Legal Status and Guardian</h2>
+                                            <div class="p20">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <label for="InputLegal">What is the legal status of the Applicant? <i class="required">(R)</i></label>
+                                                        <input type="text" class="form-control" id="InputLegal" aria-describedby="textHelp" placeholder="Enter Legal Status">
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <label for="InputMinor">Relationship to Applicant <i class="required">(R)</i></label>
+                                                        <input type="text" class="form-control" id="InputMinor" aria-describedby="textHelp" placeholder="Enter Relationship">
+                                                    </div>
+                                                </div>
+                                                <div class="row pt20">
+                                                    <div class="col-md-12">
+                                                        <label for="InputMinor">Is the Applicant a Minor or does s/he have Legal Guardian? <i class="required">(R)</i></label>
+                                                        <input type="text" class="form-control" id="InputMinor" aria-describedby="textHelp" placeholder="Enter Minor Info">
+                                                    </div>
+                                                </div>
+                                                <div class="row pt20">
+                                                    <div class="col-md-2">
+                                                        <label for="InputSuffixr">Suffix </label>
+                                                        <select class="form-control" id="exampleFormControlSelect1">
+                                                            <option></option>
+                                                            <option></option>
+                                                            <option></option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                    </div>
+                                                </div>
+                                                <div class="row pt20">
+                                                    <div class="col-md-6">
+                                                        <label for="InputLegalguard">Legal Guardian First Name/Agency Name <i class="required">(R)</i></label>
+                                                        <input type="text" class="form-control" id="InputLegalguard" aria-describedby="textHelp" placeholder="Enter Legal Guardian First Name">
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <label for="InputLegalguard">Legal Guardian Last Name <i class="required">(R)</i></label>
+                                                        <input type="text" class="form-control" id="InputLegalguard" aria-describedby="textHelp" placeholder="Enter Legal Guardian Last Name">
+                                                    </div>
+                                                </div>
+
+                                                <div class="row pt20">
+                                                    <div class="col-md-6">
+                                                        <label for="InputLgemail">Legal Guardian Email Address <i class="required">(R)</i></label>
+                                                        <input type="text" class="form-control" id="InputLgemail" aria-describedby="textHelp" placeholder="Enter Legal Guardian Email">
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <label for="InputLgphone">Legal Guardian Phone Number <i class="required">(R)</i></label>
+                                                        <input type="text" class="form-control" id="InputLgphone" aria-describedby="textHelp" placeholder="Enter Legal Guardian Phone">
+                                                    </div>
+                                                </div>
+
+                                                <div class="canvas p20 mt20">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div>
+                                                                <span class="mr30">
+                                                                    <label class="control control--checkbox">
+                                                                        <input type="checkbox" /><b>Check here if legal guardian's address is the same as applicant's</b>
+                                                                        <div class="control__indicator"></div>
+                                                                    </label>
+                                                                </span>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <label for="InputLgstreet">Legal Guardian Street Address or P.O.Box <i class="required">(R)</i></label>
+                                                            <input type="text" class="form-control" id="InputLgstreet" aria-describedby="textHelp" placeholder="Enter Legal Guardian Street Address">
+
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <label for="InputApt">Apt/Unit# Other address info <i class="required">(R)</i></label>
+                                                            <input type="text" class="form-control" id="InputApt" aria-describedby="textHelp" placeholder="Enter Apt/Unit#">
+
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="row pt20">
+                                                        <div class="col-md-6">
+                                                            <label for="InputCity">City <i class="required">(R)</i></label>
+                                                            <input type="text" class="form-control" id="InputCity" aria-describedby="textHelp" placeholder="Enter City">
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <label for="InputState">State <i class="required">(R)</i></label>
+                                                            <input type="text" class="form-control" id="InputState" aria-describedby="textHelp" placeholder="Enter State">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row pt20">
+                                                        <div class="col-md-6">
+                                                            <label for="InputCountry">Country <i class="required">(R)</i></label>
+                                                            <input type="text" class="form-control" id="InputCountry" aria-describedby="textHelp" placeholder="Enter Country">
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <label for="InputZip">Zip <i class="required">(R)</i></label>
+                                                            <div class="input-group">
+                                                                <input type="text" class="form-control" placeholder="Zip Code" aria-label="zip" aria-describedby="sizing-addon2">
+                                                                <span class="input-group-addon" id="sizing-addon2">-</span>
+                                                                <input type="text" class="form-control" placeholder="Suffix" aria-label="suffix" aria-describedby="sizing-addon2">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+									<div class="row">
+                                            <div class="col-md-12">
+                                                <div class="legend">All fields marked (R) are required</div>
+                                            </div>
+                                        </div>
+                                        <div class="canvas">
+                                            <h2 class="header">Communication</h2>
+                                            <div class="p20">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <label for="InputLegal">English Proficiency <i class="required">(R)</i></label>
+                                                        <select class="form-control" id="exampleFormControlSelect1">
+                                                            <option>Select</option>
+                                                            <option></option>
+                                                            <option></option>
+                                                        </select>
+                                                    </div>
+
+                                                </div>
+                                                <div class="row pt20">
+                                                    <div class="col-md-12">
+                                                        <label for="InputMinor">Does the Applicant prefer to speak or use a language other than English? <i class="required">(R)</i></label>
+                                                        <div>
+                                                            <span class="mr10"><input type="radio" />Yes</span>                                                           
+                                                            <span class="mr10"><input type="radio" />N0</span>
+                                                            <span><input type="radio" />Unknown/Refused</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row pt20">
+                                                    <div class="col-md-6">
+                                                        <label for="InputSuffixr">If yes, what is the language </label>
+                                                        <select class="form-control" id="exampleFormControlSelect1">
+                                                            <option>Select</option>
+                                                            <option></option>
+                                                            <option></option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="row pt20">
+                                                    <div class="col-md-12">
+                                                        <label for="InputLegalguard">What mode(s) of communication does the Applicant utilize? Select all that apply <i class="required">(R)</i></label>
+                                                        <ul>
+                                                            <li>
+                                                                <span class="mr30">
+                                                                    <label class="control control--checkbox">
+                                                                        <input type="checkbox" /><b>Communicates verbally (regardless of proficiency)</b>
+                                                                        <div class="control__indicator"></div>
+                                                                    </label>
+                                                                </span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="mr30">
+                                                                    <label class="control control--checkbox">
+                                                                        <input type="checkbox" /><b>Communicates Aids (any type of device used for communication)</b>
+                                                                        <div class="control__indicator"></div>
+                                                                    </label>
+                                                                </span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="mr30">
+                                                                    <label class="control control--checkbox">
+                                                                        <input type="checkbox" /><b>American Sign Language (ASL)</b>
+                                                                        <div class="control__indicator"></div>
+                                                                    </label>
+                                                                </span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="mr30">
+                                                                    <label class="control control--checkbox">
+                                                                        <input type="checkbox" /><b>Other Manual Communication (cued speech; gestures; signed Exact English; other signed languages; etc) </b>
+                                                                        <div class="control__indicator"></div>
+                                                                    </label>
+                                                                </span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="mr30">
+                                                                    <label class="control control--checkbox">
+                                                                        <input type="checkbox" /><b>Other Communication</b><span><input type="text" class="form-control" id="InputText" aria-describedby="textHelp" placeholder="Enter Text"></span>
+                                                                        <div class="control__indicator"></div>
+                                                                    </label>
+                                                                </span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+                                                <div class="canvas p20 mt20">
+                                                    <b>Hearing/Vision</b>
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <label for="InputMinor">Is the Applicant deaf or does the APplicant have serious difficulty hearing <i class="required">(R)</i></label>
+                                                            <div>
+                                                                <span><input type="radio" />Yes</span>
+                                                                <span class="mr10"><input type="radio" />No</span>
+                                                                <span class="mr10"><input type="radio" />Unknown/Refused</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <label for="InputMinor">Is the Applicant blind or does the Applicant have serious difficulty seeing even when wearing glasses <i class="required">(R)</i></label>
+                                                            <div>
+                                                                <span><input type="radio" />Yes</span>
+                                                                <span class="mr10"><input type="radio" />No</span>
+                                                                <span class="mr10"><input type="radio" />Unknown/Refused</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <label for="InputMinor">Is there indication from sources other than the Applicant (e.g. third party report; interviewer's observation; Medical records, etc.,) that the Applicant has hearing loss? <i class="required">(R)</i></label>
+                                                            <div>
+                                                                <span><input type="radio" />Yes</span>
+                                                                <span class="mr10"><input type="radio" />No</span>
+                                                                <span class="mr10"><input type="radio" />Unknown/Refused</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <label for="InputMinor">Is there indication from sources other than the Applicant (e.g. third party report; interviewer's observation; medical records, etc.,) that the Applicant has serious difficulty seeing, even when wearing glasses/contacts? <i class="required">(R)</i></label>
+                                                            <div>
+                                                                <span><input type="radio" />Yes</span>
+                                                                <span class="mr10"><input type="radio" />No</span>
+                                                                <span class="mr10"><input type="radio" />Unknown/Refused</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--<div class="row text-right pt20">
+                                            <div class="col-md-12">
+                                                <button type="button" class="btn btn-primary">Save and Continue Later</button>
+                                                <button type="button" class="btn btn-success">Next Page</button>
+                                            </div>
+                                        </div>-->
+										<div class="row">
+                                            <div class="col-md-12">
+                                                <div class="legend">All fields marked (R) are required</div>
+                                            </div>
+                                        </div>
+                                        <div class="canvas">
+                                            <h2 class="header">Intellectual Developmental Disability Diagnosis</h2>
+                                            <div class="p20">
+                                                <div class="row pt20">
+                                                    <div class="col-md-12">
+                                                        <label for="InputMinor">Does the Applicant have a confirmed Intellectual Developmental Disability Diagnosis <i class="required">(R)</i></label>
+                                                        <div>
+                                                            <span><input type="radio" />Yes</span>
+                                                            <span class="mr10">
+                                                                <input type="radio" />No
+                                                            </span>
+                                                            <span class="mr10"><input type="radio" />Unknown/Refused</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row pt20">
+                                                    <div class="col-md-6">
+                                                        <label for="InputDiagnosis">Please Select Diagnosis(s) </label>
+                                                        <select class="form-control" id="">
+                                                            <option>Select</option>
+                                                            <option></option>
+                                                            <option></option>
+                                                        </select>
+                                                    </div>
+                                                    <div></div>
+                                                </div>
+
+                                                <div class="row pt20">
+                                                    <div class="col-md-6">
+                                                        <label for="InputSuffixr">Age at Diagnosis(s) </label>
+                                                        <select class="form-control" id="">
+                                                            <option>Select</option>
+                                                            <option></option>
+                                                            <option></option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                                <div class="canvas p20 mt20">
+                                                    <b>Referral/Resources</b>
+                                                    <!--<div class="row pt20">
+                                                        <div class="col-md-12">
+                                                            <label for="InputMinor">Select Applicant Referral Source <i class="required">(R)</i></label>
+                                                            <select multiple class="form-control" id="exampleFormControlSelect2">
+                                                                <option>1</option>
+                                                                <option>2</option>
+                                                                <option>3</option>
+                                                                <option>4</option>
+                                                                <option>5</option>
+                                                            </select>
+                                                        </div>-->
+														<ul>
+                                                            <li>
+                                                                <span class="mr30">
+                                                                    <label class="control control--checkbox">
+                                                                        <input type="checkbox" /><b>Self / Applicant</b>
+                                                                        <div class="control__indicator"></div>
+                                                                    </label>
+                                                                </span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="mr30">
+                                                                    <label class="control control--checkbox">
+                                                                        <input type="checkbox" /><b>Family</b>
+                                                                        <div class="control__indicator"></div>
+                                                                    </label>
+                                                                </span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="mr30">
+                                                                    <label class="control control--checkbox">
+                                                                        <input type="checkbox" /><b>Legal Guardian/Representative</b>
+                                                                        <div class="control__indicator"></div>
+                                                                    </label>
+                                                                </span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="mr30">
+                                                                    <label class="control control--checkbox">
+                                                                        <input type="checkbox" /><b>BH/DD Provider </b>
+                                                                        <div class="control__indicator"></div>
+                                                                    </label>
+                                                                </span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="mr30">
+                                                                    <label class="control control--checkbox">
+                                                                        <input type="checkbox" /><b>Access/Crisis Line</b><span><input type="text" class="form-control" id="InputText" aria-describedby="textHelp" placeholder="Enter Text"></span>
+                                                                        <div class="control__indicator"></div>
+                                                                    </label>
+                                                                </span>
+                                                            </li>
+															<li>
+                                                                <span class="mr30">
+                                                                    <label class="control control--checkbox">
+                                                                        <input type="checkbox" /><b>AMobile Crisis Team</b><span><input type="text" class="form-control" id="InputText" aria-describedby="textHelp" placeholder="Enter Text"></span>
+                                                                        <div class="control__indicator"></div>
+                                                                    </label>
+                                                                </span>
+                                                            </li>
+															<li>
+                                                                <span class="mr30">
+                                                                    <label class="control control--checkbox">
+                                                                        <input type="checkbox" /><b>Physician</b><span><input type="text" class="form-control" id="InputText" aria-describedby="textHelp" placeholder="Enter Text"></span>
+                                                                        <div class="control__indicator"></div>
+                                                                    </label>
+                                                                </span>
+                                                            </li>
+															<li>
+                                                                <span class="mr30">
+                                                                    <label class="control control--checkbox">
+                                                                        <input type="checkbox" /><b>Professional/Therapist</b><span><input type="text" class="form-control" id="InputText" aria-describedby="textHelp" placeholder="Enter Text"></span>
+                                                                        <div class="control__indicator"></div>
+                                                                    </label>
+                                                                </span>
+                                                            </li>
+															<li>
+                                                                <span class="mr30">
+                                                                    <label class="control control--checkbox">
+                                                                        <input type="checkbox" /><b>State Hospital - Adult MH</b><span><input type="text" class="form-control" id="InputText" aria-describedby="textHelp" placeholder="Enter Text"></span>
+                                                                        <div class="control__indicator"></div>
+                                                                    </label>
+                                                                </span>
+                                                            </li>
+															<li>
+                                                                <span class="mr30">
+                                                                    <label class="control control--checkbox">
+                                                                        <input type="checkbox" /><b>State Hospital - Forensic </b><span><input type="text" class="form-control" id="InputText" aria-describedby="textHelp" placeholder="Enter Text"></span>
+                                                                        <div class="control__indicator"></div>
+                                                                    </label>
+                                                                </span>
+                                                            </li>
+															<li>
+                                                                <span class="mr30">
+                                                                    <label class="control control--checkbox">
+                                                                        <input type="checkbox" /><b>State Hospital - ICF/MR</b><span><input type="text" class="form-control" id="InputText" aria-describedby="textHelp" placeholder="Enter Text"></span>
+                                                                        <div class="control__indicator"></div>
+                                                                    </label>
+                                                                </span>
+                                                            </li>
+															<li>
+                                                                <span class="mr30">
+                                                                    <label class="control control--checkbox">
+                                                                        <input type="checkbox" /><b>State Hospital - Skilled Nursing</b><span><input type="text" class="form-control" id="InputText" aria-describedby="textHelp" placeholder="Enter Text"></span>
+                                                                        <div class="control__indicator"></div>
+                                                                    </label>
+                                                                </span>
+                                                            </li>
+															<li>
+                                                                <span class="mr30">
+                                                                    <label class="control control--checkbox">
+                                                                        <input type="checkbox" /><b>Private Psychiatric Hospital</b><span><input type="text" class="form-control" id="InputText" aria-describedby="textHelp" placeholder="Enter Text"></span>
+                                                                        <div class="control__indicator"></div>
+                                                                    </label>
+                                                                </span>
+                                                            </li>
+															<li>
+                                                                <span class="mr30">
+                                                                    <label class="control control--checkbox">
+                                                                        <input type="checkbox" /><b>Crisis Stabilization Unit</b><span><input type="text" class="form-control" id="InputText" aria-describedby="textHelp" placeholder="Enter Text"></span>
+                                                                        <div class="control__indicator"></div>
+                                                                    </label>
+                                                                </span>
+                                                            </li>
+															<li>
+                                                                <span class="mr30">
+                                                                    <label class="control control--checkbox">
+                                                                        <input type="checkbox" /><b>General Hospital</b><span><input type="text" class="form-control" id="InputText" aria-describedby="textHelp" placeholder="Enter Text"></span>
+                                                                        <div class="control__indicator"></div>
+                                                                    </label>
+                                                                </span>
+                                                            </li>
+															<li>
+                                                                <span class="mr30">
+                                                                    <label class="control control--checkbox">
+                                                                        <input type="checkbox" /><b>Emergency Room</b><span><input type="text" class="form-control" id="InputText" aria-describedby="textHelp" placeholder="Enter Text"></span>
+                                                                        <div class="control__indicator"></div>
+                                                                    </label>
+                                                                </span>
+                                                            </li>
+															<li>
+                                                                <span class="mr30">
+                                                                    <label class="control control--checkbox">
+                                                                        <input type="checkbox" /><b>Jail</b><span><input type="text" class="form-control" id="InputText" aria-describedby="textHelp" placeholder="Enter Text"></span>
+                                                                        <div class="control__indicator"></div>
+                                                                    </label>
+                                                                </span>
+                                                            </li>
+															<li>
+                                                                <span class="mr30">
+                                                                    <label class="control control--checkbox">
+                                                                        <input type="checkbox" /><b>Prison</b><span><input type="text" class="form-control" id="InputText" aria-describedby="textHelp" placeholder="Enter Text"></span>
+                                                                        <div class="control__indicator"></div>
+                                                                    </label>
+                                                                </span>
+                                                            </li>
+															<li>
+                                                                <span class="mr30">
+                                                                    <label class="control control--checkbox">
+                                                                        <input type="checkbox" /><b>Law Enforcement</b><span><input type="text" class="form-control" id="InputText" aria-describedby="textHelp" placeholder="Enter Text"></span>
+                                                                        <div class="control__indicator"></div>
+                                                                    </label>
+                                                                </span>
+                                                            </li>
+															<li>
+                                                                <span class="mr30">
+                                                                    <label class="control control--checkbox">
+                                                                        <input type="checkbox" /><b>Criminal Court</b><span><input type="text" class="form-control" id="InputText" aria-describedby="textHelp" placeholder="Enter Text"></span>
+                                                                        <div class="control__indicator"></div>
+                                                                    </label>
+                                                                </span>
+                                                            </li>
+															<li>
+                                                                <span class="mr30">
+                                                                    <label class="control control--checkbox">
+                                                                        <input type="checkbox" /><b>Juvenile Justice</b><span><input type="text" class="form-control" id="InputText" aria-describedby="textHelp" placeholder="Enter Text"></span>
+                                                                        <div class="control__indicator"></div>
+                                                                    </label>
+                                                                </span>
+                                                            </li>
+															<li>
+                                                                <span class="mr30">
+                                                                    <label class="control control--checkbox">
+                                                                        <input type="checkbox" /><b>School</b><span><input type="text" class="form-control" id="InputText" aria-describedby="textHelp" placeholder="Enter Text"></span>
+                                                                        <div class="control__indicator"></div>
+                                                                    </label>
+                                                                </span>
+                                                            </li>
+															<li>
+                                                                <span class="mr30">
+                                                                    <label class="control control--checkbox">
+                                                                        <input type="checkbox" /><b>Support Coordinator</b><span><input type="text" class="form-control" id="InputText" aria-describedby="textHelp" placeholder="Enter Text"></span>
+                                                                        <div class="control__indicator"></div>
+                                                                    </label>
+                                                                </span>
+                                                            </li>
+															<li>
+                                                                <span class="mr30">
+                                                                    <label class="control control--checkbox">
+                                                                        <input type="checkbox" /><b>Aging and Disability Resource Center</b><span><input type="text" class="form-control" id="InputText" aria-describedby="textHelp" placeholder="Enter Text"></span>
+                                                                        <div class="control__indicator"></div>
+                                                                    </label>
+                                                                </span>
+                                                            </li>
+															<li>
+                                                                <span class="mr30">
+                                                                    <label class="control control--checkbox">
+                                                                        <input type="checkbox" /><b>Central Office</b><span><input type="text" class="form-control" id="InputText" aria-describedby="textHelp" placeholder="Enter Text"></span>
+                                                                        <div class="control__indicator"></div>
+                                                                    </label>
+                                                                </span>
+                                                            </li>
+															<li>
+                                                                <span class="mr30">
+                                                                    <label class="control control--checkbox">
+                                                                        <input type="checkbox" /><b>Regional Office</b><span><input type="text" class="form-control" id="InputText" aria-describedby="textHelp" placeholder="Enter Text"></span>
+                                                                        <div class="control__indicator"></div>
+                                                                    </label>
+                                                                </span>
+                                                            </li>
+															<li>
+                                                                <span class="mr30">
+                                                                    <label class="control control--checkbox">
+                                                                        <input type="checkbox" /><b>Clergy/Faith-Based</b><span><input type="text" class="form-control" id="InputText" aria-describedby="textHelp" placeholder="Enter Text"></span>
+                                                                        <div class="control__indicator"></div>
+                                                                    </label>
+                                                                </span>
+                                                            </li>
+                                                        </ul>
+														
+                                                    </div>
+                                                    <div class="row pt20">
+                                                        <div class="col-md-12">
+                                                            <label for="InputReferral">Referral Source Name <i class="required">(R)</i></label>
+                                                            <input type="text" class="form-control" id="InputReferral" aria-describedby="textHelp" placeholder="Referral Source Name">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-12 pt20">
+                                                            <label for="InputResources">Current Resources Section <i class="required">(R)</i></label>
+															<ul>
+                                                            <li>
+                                                                <span class="mr30">
+                                                                    <label class="control control--checkbox">
+                                                                        <input type="checkbox" /><b>SSI</b>
+                                                                        <div class="control__indicator"></div>
+                                                                    </label>
+                                                                </span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="mr30">
+                                                                    <label class="control control--checkbox">
+                                                                        <input type="checkbox" /><b>SSDI</b>
+                                                                        <div class="control__indicator"></div>
+                                                                    </label>
+                                                                </span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="mr30">
+                                                                    <label class="control control--checkbox">
+                                                                        <input type="checkbox" /><b>Employment</b>
+                                                                        <div class="control__indicator"></div>
+                                                                    </label>
+                                                                </span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="mr30">
+                                                                    <label class="control control--checkbox">
+                                                                        <input type="checkbox" /><b>Medicaid </b>
+                                                                        <div class="control__indicator"></div>
+                                                                    </label>
+                                                                </span>
+                                                            </li>
+                                                            <li>
+                                                                <span class="mr30">
+                                                                    <label class="control control--checkbox">
+                                                                        <input type="checkbox" /><b>MAO (Medical Assistance Only)</b><span><input type="text" class="form-control" id="InputText" aria-describedby="textHelp" placeholder="Enter Text"></span>
+                                                                        <div class="control__indicator"></div>
+                                                                    </label>
+                                                                </span>
+                                                            </li>
+															<li>
+                                                                <span class="mr30">
+                                                                    <label class="control control--checkbox">
+                                                                        <input type="checkbox" /><b>PeachCare for Kids</b><span><input type="text" class="form-control" id="InputText" aria-describedby="textHelp" placeholder="Enter Text"></span>
+                                                                        <div class="control__indicator"></div>
+                                                                    </label>
+                                                                </span>
+                                                            </li>
+															<li>
+                                                                <span class="mr30">
+                                                                    <label class="control control--checkbox">
+                                                                        <input type="checkbox" /><b>Medicare</b><span><input type="text" class="form-control" id="InputText" aria-describedby="textHelp" placeholder="Enter Text"></span>
+                                                                        <div class="control__indicator"></div>
+                                                                    </label>
+                                                                </span>
+                                                            </li>
+															<li>
+                                                                <span class="mr30">
+                                                                    <label class="control control--checkbox">
+                                                                        <input type="checkbox" /><b>Private Insurance</b><span><input type="text" class="form-control" id="InputText" aria-describedby="textHelp" placeholder="Enter Text"></span>
+                                                                        <div class="control__indicator"></div>
+                                                                    </label>
+                                                                </span>
+                                                            </li>
+															<li>
+                                                                <span class="mr30">
+                                                                    <label class="control control--checkbox">
+                                                                        <input type="checkbox" /><b>HIPP (Health Insurance Premium Payment Program)</b><span><input type="text" class="form-control" id="InputText" aria-describedby="textHelp" placeholder="Enter Text"></span>
+                                                                        <div class="control__indicator"></div>
+                                                                    </label>
+                                                                </span>
+                                                            </li>
+															<li>
+                                                                <span class="mr30">
+                                                                    <label class="control control--checkbox">
+                                                                        <input type="checkbox" /><b>Food Stamps (SNAP) </b><span><input type="text" class="form-control" id="InputText" aria-describedby="textHelp" placeholder="Enter Text"></span>
+                                                                        <div class="control__indicator"></div>
+                                                                    </label>
+                                                                </span>
+                                                            </li>
+															<li>
+                                                                <span class="mr30">
+                                                                    <label class="control control--checkbox">
+                                                                        <input type="checkbox" /><b>TANF (Temporary Assistance for Needy Families)</b><span><input type="text" class="form-control" id="InputText" aria-describedby="textHelp" placeholder="Enter Text"></span>
+                                                                        <div class="control__indicator"></div>
+                                                                    </label>
+                                                                </span>
+                                                            </li>
+															<li>
+                                                                <span class="mr30">
+                                                                    <label class="control control--checkbox">
+                                                                        <input type="checkbox" /><b>Housing Assistance (Section 8, HPRP)</b><span><input type="text" class="form-control" id="InputText" aria-describedby="textHelp" placeholder="Enter Text"></span>
+                                                                        <div class="control__indicator"></div>
+                                                                    </label>
+                                                                </span>
+                                                            </li>
+															<li>
+                                                                <span class="mr30">
+                                                                    <label class="control control--checkbox">
+                                                                        <input type="checkbox" /><b>Veterans Assistance/Benefits</b><span><input type="text" class="form-control" id="InputText" aria-describedby="textHelp" placeholder="Enter Text"></span>
+                                                                        <div class="control__indicator"></div>
+                                                                    </label>
+                                                                </span>
+                                                            </li>
+															<li>
+                                                                <span class="mr30">
+                                                                    <label class="control control--checkbox">
+                                                                        <input type="checkbox" /><b>Railroad Benefits</b><span><input type="text" class="form-control" id="InputText" aria-describedby="textHelp" placeholder="Enter Text"></span>
+                                                                        <div class="control__indicator"></div>
+                                                                    </label>
+                                                                </span>
+                                                            </li>
+															<li>
+                                                                <span class="mr30">
+                                                                    <label class="control control--checkbox">
+                                                                        <input type="checkbox" /><b>Vocational Rehabilitation</b><span><input type="text" class="form-control" id="InputText" aria-describedby="textHelp" placeholder="Enter Text"></span>
+                                                                        <div class="control__indicator"></div>
+                                                                    </label>
+                                                                </span>
+                                                            </li>
+															<li>
+                                                                <span class="mr30">
+                                                                    <label class="control control--checkbox">
+                                                                        <input type="checkbox" /><b>Ticket to Work</b><span><input type="text" class="form-control" id="InputText" aria-describedby="textHelp" placeholder="Enter Text"></span>
+                                                                        <div class="control__indicator"></div>
+                                                                    </label>
+                                                                </span>
+                                                            </li>
+															<li>
+                                                                <span class="mr30">
+                                                                    <label class="control control--checkbox">
+                                                                        <input type="checkbox" /><b>PASS Plan (Plan for Achieving Self-Supports)</b><span><input type="text" class="form-control" id="InputText" aria-describedby="textHelp" placeholder="Enter Text"></span>
+                                                                        <div class="control__indicator"></div>
+                                                                    </label>
+                                                                </span>
+                                                            </li>
+															<li>
+                                                                <span class="mr30">
+                                                                    <label class="control control--checkbox">
+                                                                        <input type="checkbox" /><b>GAPP (Georgia Pediatric Program Waiver)</b><span><input type="text" class="form-control" id="InputText" aria-describedby="textHelp" placeholder="Enter Text"></span>
+                                                                        <div class="control__indicator"></div>
+                                                                    </label>
+                                                                </span>
+                                                            </li>
+															<li>
+                                                                <span class="mr30">
+                                                                    <label class="control control--checkbox">
+                                                                        <input type="checkbox" /><b>CCSP (Community Care Services Program)</b><span><input type="text" class="form-control" id="InputText" aria-describedby="textHelp" placeholder="Enter Text"></span>
+                                                                        <div class="control__indicator"></div>
+                                                                    </label>
+                                                                </span>
+                                                            </li>
+															<li>
+                                                                <span class="mr30">
+                                                                    <label class="control control--checkbox">
+                                                                        <input type="checkbox" /><b>ICWP (Independent Care Waiver Program)</b><span><input type="text" class="form-control" id="InputText" aria-describedby="textHelp" placeholder="Enter Text"></span>
+                                                                        <div class="control__indicator"></div>
+                                                                    </label>
+                                                                </span>
+                                                            </li>
+															<li>
+                                                                <span class="mr30">
+                                                                    <label class="control control--checkbox">
+                                                                        <input type="checkbox" /><b>SOURCE (Service Options Using Resources in a Community Environment)</b><span><input type="text" class="form-control" id="InputText" aria-describedby="textHelp" placeholder="Enter Text"></span>
+                                                                        <div class="control__indicator"></div>
+                                                                    </label>
+                                                                </span>
+                                                            </li>
+															<li>
+                                                                <span class="mr30">
+                                                                    <label class="control control--checkbox">
+                                                                        <input type="checkbox" /><b>CBAY (Community-Based Alternatives for Youth)</b><span><input type="text" class="form-control" id="InputText" aria-describedby="textHelp" placeholder="Enter Text"></span>
+                                                                        <div class="control__indicator"></div>
+                                                                    </label>
+                                                                </span>
+                                                            </li>
+															<li>
+                                                                <span class="mr30">
+                                                                    <label class="control control--checkbox">
+                                                                        <input type="checkbox" /><b>Deeming Waiver (Katie Beckett)</b><span><input type="text" class="form-control" id="InputText" aria-describedby="textHelp" placeholder="Enter Text"></span>
+                                                                        <div class="control__indicator"></div>
+                                                                    </label>
+                                                                </span>
+                                                            </li>
+															<li>
+                                                                <span class="mr30">
+                                                                    <label class="control control--checkbox">
+                                                                        <input type="checkbox" /><b>CAPS (Subsidized Child Care Assistance)</b><span><input type="text" class="form-control" id="InputText" aria-describedby="textHelp" placeholder="Enter Text"></span>
+                                                                        <div class="control__indicator"></div>
+                                                                    </label>
+                                                                </span>
+                                                            </li>
+															<li>
+                                                                <span class="mr30">
+                                                                    <label class="control control--checkbox">
+                                                                        <input type="checkbox" /><b>FQHC (Federally Qualified Health Center)</b><span><input type="text" class="form-control" id="InputText" aria-describedby="textHelp" placeholder="Enter Text"></span>
+                                                                        <div class="control__indicator"></div>
+                                                                    </label>
+                                                                </span>
+                                                            </li>
+															<li>
+                                                                <span class="mr30">
+                                                                    <label class="control control--checkbox">
+                                                                        <input type="checkbox" /><b>Adoption Assistance</b><span><input type="text" class="form-control" id="InputText" aria-describedby="textHelp" placeholder="Enter Text"></span>
+                                                                        <div class="control__indicator"></div>
+                                                                    </label>
+                                                                </span>
+                                                            </li>
+                                                        </ul>
+                                                            <!--<select multiple class="form-control" id="exampleFormControlSelect2">
+                                                                <option>1</option>
+                                                                <option>2</option>
+                                                                <option>3</option>
+                                                                <option>4</option>
+                                                                <option>5</option>
+                                                            </select>-->
+                                                        </div>
+                                                    </div>
+                                                    <div class="row pt20">
+                                                        <div class="col-md-12">
+                                                            <label for="InputGrossincome">Applicant's Monthly Gross Income <i class="required">(R)</i></label>
+                                                            <input type="text" class="form-control" id="InputGrossincome" aria-describedby="textHelp" placeholder="Enter Applicant's Gross Income">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+										<div class="row">
+                                            <div class="col-md-12">
+                                                <div class="legend">All fields marked (R) are required</div>
+                                            </div>
+                                        </div>
+                                        <div class="canvas">
+                                            <h2 class="header">Application Supporting Documents</h2>
+                                            <div class="p20">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <p>
+                                                            Please scan and upload supporting documentation to verify Medicaid eligibility, lawful presence, and a qualifying diagnosis or condition.
+                                                            An application is complete for DBHDD review when required documents are received either by mail or by scanning and uploading documents to accompany the web application
+                                                        </p>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="row pt20">
+                                                    <div class="col-md-6">
+                                                        <label for="InputBC">Birth Certificate <i class="required">(R)</i></label>
+                                                        <select class="form-control" id="">
+                                                            <option>Select Document Type</option>
+                                                            <option></option>
+                                                            <option></option>
+                                                        </select>
+
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        Select file from your computer
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <button class="btn btn-primary">Upload</button>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row pt20">
+                                                    <div class="col-md-4">
+                                                        <label for="InputProvidername">Provide Name <i class="required">(R)</i></label>
+                                                        <input type="text" class="form-control" id="InputProvidername" aria-describedby="textHelp" placeholder="Enter Provider Name">
+
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <label for="InputEmail">Email </label>
+                                                        <input type="email" class="form-control" id="InputEmail" aria-describedby="textHelp" placeholder="name@domain.com">
+                                                    </div>
+                                                </div>
+
+                                                <div class="row pt20">
+                                                    <div class="col-md-4">
+                                                        <label for="InputStreet">Street Address <i class="required">(R)</i></label>
+                                                        <input type="text" class="form-control" id="InputStreet" aria-describedby="textHelp" placeholder="Enter Street Address">
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <label for="InputSuite">Suite or other add Info </label>
+                                                        <input type="text" class="form-control" id="InputSuite" aria-describedby="textHelp" placeholder="Enter Suite">
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <label for="InputDiagnosis">State <i class="required">(R)</i></label>
+                                                        <select class="form-control" id="">
+                                                            <option>Select</option>
+                                                            <option></option>
+                                                            <option></option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row pt20">
+                                                    <div class="col-md-4">
+                                                        <label for="InputDiagnosis">County <i class="required">(R)</i></label>
+                                                        <input type="text" class="form-control" id="InputProvidername" aria-describedby="textHelp" placeholder="Enter Provider Name">
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <label for="InputDiagnosis">Zip <i class="required">(R)</i></label>
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control" placeholder="Zip Code" aria-label="zip" aria-describedby="sizing-addon2">
+                                                            <span class="input-group-addon" id="sizing-addon2">-</span>
+                                                            <input type="text" class="form-control" placeholder="Suffix" aria-label="suffix" aria-describedby="sizing-addon2">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+
+                                                    </div>
+                                                </div>
+
+                                                <div class="row pt20">
+                                                    <div class="col-md-6">
+                                                        <label for="InputDiagnosis">Phone Number <i class="required">(R)</i></label>
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control" placeholder="" aria-label="zip" aria-describedby="sizing-addon2">
+                                                            <span class="input-group-addon" id="sizing-addon2">-</span>
+                                                            <input type="text" class="form-control" placeholder="" aria-label="zip" aria-describedby="sizing-addon2">
+                                                            <span class="input-group-addon" id="sizing-addon2">-</span>
+                                                            <input type="text" class="form-control" placeholder="" aria-label="suffix" aria-describedby="sizing-addon2">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <label for="InputDiagnosis">Fax Number </label>
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control" placeholder="" aria-label="zip" aria-describedby="sizing-addon2">
+                                                            <span class="input-group-addon" id="sizing-addon2">-</span>
+                                                            <input type="text" class="form-control" placeholder="" aria-label="zip" aria-describedby="sizing-addon2">
+                                                            <span class="input-group-addon" id="sizing-addon2">-</span>
+                                                            <input type="text" class="form-control" placeholder="" aria-label="suffix" aria-describedby="sizing-addon2">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row pt20">
+                                                    <div class="col-md-12">
+                                                        <p>
+                                                            If the applicant does not hae social security card, Medicaid or Medicare, documentation of lawful presence can
+                                                            include: a birth certificate or unexpired permanent resident card. A description of documentation of lawful presence can be
+                                                            found at: https://godbhddpolicystat.com/policy/528634/latest
+                                                        </p>
+                                                        <p>
+                                                            A detailes description of Waiver eligibility criteria is available at www.mmis.georgia.gov. To access this information, please
+                                                            point to the "provider information" menu and select "provider manuals". The criteria can be found in the "Comprehensive Supports Waiver Program Part II manual"
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--<div class="row text-right pt20">
+                                            <div class="col-md-12">
+                                                <button type="button" class="btn btn-primary">Save and Continue Later</button>
+                                                <button type="button" class="btn btn-success">Next Page</button>
+                                            </div>
+                                        </div>-->
+										<div class="row">
+                                            <div class="col-md-12">
+                                                <div class="legend">All fields marked (R) are required</div>
+                                            </div>
+                                        </div>
+                                        <div class="canvas">
+                                            <h2 class="header">Application Signature (Electronic)</h2>
+                                            <div class="p20">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <p>
+                                                            Some Content comes here
+                                                        </p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row pt20">
+                                                    <div class="col-md-4">
+                                                        <label for="InputBC">First Name <i class="required">(R)</i></label>
+                                                        <input type="text" class="form-control" id="InputProvidername" aria-describedby="textHelp" placeholder="Enter Provider Name">
+
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <label for="InputBC">Last Name <i class="required">(R)</i></label>
+                                                        <input type="text" class="form-control" id="InputProvidername" aria-describedby="textHelp" placeholder="Enter Provider Name">
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <label for="InputDate">Date: <label>Auto-generated</label>  <i class="required">(R)</i></label>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row pt20">
+                                                    <div class="col-md-12">
+                                                        <label for="InputProvidername">Application completed by (select one) <i class="required">(R)</i></label>
+                                                       <div>
+                                                           <span class="inline mr30">
+                                                               <label class="control control--checkbox">
+                                                                   <input type="checkbox" />Applicant
+                                                                   <div class="control__indicator"></div>
+                                                               </label>
+                                                           </span>
+                                                           <span class="inline mr30">
+                                                               <label class="control control--checkbox">
+                                                                   <input type="checkbox" />Guardian
+                                                                   <div class="control__indicator"></div>
+                                                               </label>
+                                                           </span>
+                                                           <span class="inline">
+                                                               <label class="control control--checkbox">
+                                                                   <input type="checkbox" />Family
+                                                                   <div class="control__indicator"></div>
+                                                               </label>
+                                                           </span>
+                                                       </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row pt20">
+                                                    <div class="col-md-6">
+                                                        <label for="InputPrintname">Print Name </label>
+                                                        <input type="text" class="form-control" id="InputPrintedname" aria-describedby="textHelp" placeholder="Enter Print Name">
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <label for="InputPrintname">Please indicate the preferred method of contact </label>
+                                                        <span class="inline mr30">
+                                                            <label class="control control--checkbox">
+                                                                <input type="checkbox" />Email
+                                                                <div class="control__indicator"></div>
+                                                            </label>
+                                                        </span>
+                                                        <span class="inline">
+                                                            <label class="control control--checkbox">
+                                                                <input type="checkbox" />Phone
+                                                                <div class="control__indicator"></div>
+                                                            </label>
+                                                        </span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row pt20">
+                                                    <div class="col-md-6">
+                                                        <label for="InputStreet">Email Address  </label>
+                                                        <input type="email" class="form-control" id="InputEmail" aria-describedby="textHelp" placeholder="name@domain.com">
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <label for="InputSuite">Phone </label>
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control" placeholder="" aria-label="zip" aria-describedby="sizing-addon2">
+                                                            <span class="input-group-addon" id="sizing-addon2">-</span>
+                                                            <input type="text" class="form-control" placeholder="" aria-label="zip" aria-describedby="sizing-addon2">
+                                                            <span class="input-group-addon" id="sizing-addon2">-</span>
+                                                            <input type="text" class="form-control" placeholder="" aria-label="suffix" aria-describedby="sizing-addon2">
+                                                        </div>
+                                                    </div>
+                                                </div> 
+                                            </div>
+                                        </div>
+                                        <!--<div class="row text-right pt20">
+                                            <div class="col-md-12">
+                                                <button type="button" class="btn btn-primary">Save and Continue Later</button>
+                                                <button type="button" class="btn btn-success">Next Page</button>
+                                            </div>
+                                        </div>-->
+                                    </div>
+                                   
+                                    </div>
+                              
+
+
+                                    <!--Application Signature-->
+                                    <div class="tab-pane fade p25" id="v-pills-sign" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="legend">All fields marked (R) are required</div>
+                                            </div>
+                                        </div>
+                                        <div class="canvas">
+                                            <h2 class="header">Application Signature (Electronic)</h2>
+                                            <div class="p20">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <p>
+                                                            Some Content comes here
+                                                        </p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row pt20">
+                                                    <div class="col-md-4">
+                                                        <label for="InputBC">First Name <i class="required">(R)</i></label>
+                                                        <input type="text" class="form-control" id="InputProvidername" aria-describedby="textHelp" placeholder="Enter Provider Name">
+
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <label for="InputBC">Last Name <i class="required">(R)</i></label>
+                                                        <input type="text" class="form-control" id="InputProvidername" aria-describedby="textHelp" placeholder="Enter Provider Name">
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <label for="InputDate">Date: <label>Auto-generated</label>  <i class="required">(R)</i></label>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row pt20">
+                                                    <div class="col-md-12">
+                                                        <label for="InputProvidername">Application completed by (select one) <i class="required">(R)</i></label>
+                                                       <div>
+                                                           <span class="inline mr30">
+                                                               <label class="control control--checkbox">
+                                                                   <input type="checkbox" />Applicant
+                                                                   <div class="control__indicator"></div>
+                                                               </label>
+                                                           </span>
+                                                           <span class="inline mr30">
+                                                               <label class="control control--checkbox">
+                                                                   <input type="checkbox" />Guardian
+                                                                   <div class="control__indicator"></div>
+                                                               </label>
+                                                           </span>
+                                                           <span class="inline">
+                                                               <label class="control control--checkbox">
+                                                                   <input type="checkbox" />Family
+                                                                   <div class="control__indicator"></div>
+                                                               </label>
+                                                           </span>
+                                                       </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row pt20">
+                                                    <div class="col-md-6">
+                                                        <label for="InputPrintname">Print Name </label>
+                                                        <input type="text" class="form-control" id="InputPrintedname" aria-describedby="textHelp" placeholder="Enter Print Name">
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <label for="InputPrintname">Please indicate the preferred method of contact </label>
+                                                        <span class="inline mr30">
+                                                            <label class="control control--checkbox">
+                                                                <input type="checkbox" />Email
+                                                                <div class="control__indicator"></div>
+                                                            </label>
+                                                        </span>
+                                                        <span class="inline">
+                                                            <label class="control control--checkbox">
+                                                                <input type="checkbox" />Phone
+                                                                <div class="control__indicator"></div>
+                                                            </label>
+                                                        </span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row pt20">
+                                                    <div class="col-md-6">
+                                                        <label for="InputStreet">Email Address  </label>
+                                                        <input type="email" class="form-control" id="InputEmail" aria-describedby="textHelp" placeholder="name@domain.com">
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <label for="InputSuite">Phone </label>
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control" placeholder="" aria-label="zip" aria-describedby="sizing-addon2">
+                                                            <span class="input-group-addon" id="sizing-addon2">-</span>
+                                                            <input type="text" class="form-control" placeholder="" aria-label="zip" aria-describedby="sizing-addon2">
+                                                            <span class="input-group-addon" id="sizing-addon2">-</span>
+                                                            <input type="text" class="form-control" placeholder="" aria-label="suffix" aria-describedby="sizing-addon2">
+                                                        </div>
+                                                    </div>
+                                                </div> 
+                                            </div>
+                                        </div>
+                                        <div class="row text-right pt20">
+                                            <div class="col-md-12">
+                                                <button type="button" class="btn btn-primary">Save and Continue Later</button>
+                                                <button type="button" class="btn btn-success">Next Page</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Application Signature ends here-->
+									
+									
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- /Section: intro -->
+
+
+
+
+
+
+
+
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="wow fadeInDown" data-wow-delay="0.1s">
+                            <div class="widget">
+
+                                <ul class="footer-menus">
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-home" aria-hidden="true"></i><br />
+                                            <span>Home</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-file" aria-hidden="true"></i><br />
+                                        <a href="#">Terms</a>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-user" aria-hidden="true"></i><br />
+                                        <a href="#">Services</a>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-phone" aria-hidden="true"></i><br />
+                                        <a href="#">Contact Us</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sub-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-6 col-lg-6">
+                            <div class="wow fadeInLeft" data-wow-delay="0.1s">
+                                <div class="text-left">
+                                    <p>&copy; Copyright - IDD Theme. All rights reserved.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-6">
+                            <div class="wow fadeInRight" data-wow-delay="0.1s">
+                                <div class="text-right">
+                                    <div class="credits">
+                                        <a href="#"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+
+    <!-- Core JavaScript Files -->
+    <!-- <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/jquery.scrollTo.js"></script>
+    <script src="js/jquery.appear.js"></script>
+    <script src="js/custom.js"></script>
+ -->
+	 <script src="./lib/jquery.min.js">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
+	type="text/javascript"></script>
+    <script type="text/javascript" src="./lib/jspdf.min.js">
+    </script>
+    <script type="text/javascript" src="./lib/html2canvas.min.js">
+    </script>
+   <!--   <script type="text/javascript">
+	 $(document).ready(function(){
+			$('#spinicon').hide();
+   
+
+	});
+	 </script> -->
+	<!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"
+	type="text/javascript"></script> -->
+	
+    <script type="text/javascript" src="app_mod.js">
+    </script>
+
+
+    
+</body>
+
+</html>
